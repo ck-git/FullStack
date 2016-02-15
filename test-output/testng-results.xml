@@ -5,16 +5,16 @@
       <![CDATA[passed]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="37" started-at="2016-02-06T10:34:52Z" finished-at="2016-02-06T10:34:52Z">
+  <suite name="WordPressAutomation" duration-ms="34" started-at="2016-02-12T17:07:27Z" finished-at="2016-02-12T17:07:27Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="37" started-at="2016-02-06T10:34:52Z" finished-at="2016-02-06T10:34:52Z">
+    <test name="test1" duration-ms="34" started-at="2016-02-12T17:07:27Z" finished-at="2016-02-12T17:07:27Z">
       <class name="com.psl.fullstack.FullStackProject.Sample">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.psl.fullstack.FullStackProject.Sample@a4a92b]" name="beforeClass" is-config="true" duration-ms="15" started-at="2016-02-06T16:04:52Z" finished-at="2016-02-06T16:04:52Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.psl.fullstack.FullStackProject.Sample@e9a829]" name="beforeClass" is-config="true" duration-ms="10" started-at="2016-02-12T22:37:27Z" finished-at="2016-02-12T22:37:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="f()[pri:0, instance:com.psl.fullstack.FullStackProject.Sample@a4a92b]" name="f" duration-ms="7" started-at="2016-02-06T16:04:52Z" finished-at="2016-02-06T16:04:52Z">
+        <test-method status="PASS" signature="f()[pri:0, instance:com.psl.fullstack.FullStackProject.Sample@e9a829]" name="f" duration-ms="7" started-at="2016-02-12T22:37:27Z" finished-at="2016-02-12T22:37:27Z">
           <reporter-output>
             <line>
               <![CDATA[passed]]>
@@ -22,6 +22,6 @@
           </reporter-output>
         </test-method> <!-- f -->
       </class> <!-- com.psl.fullstack.FullStackProject.Sample -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- test1 -->
+  </suite> <!-- WordPressAutomation -->
 </testng-results>
