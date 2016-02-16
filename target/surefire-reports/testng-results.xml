@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Command line suite" duration-ms="43" started-at="2016-02-12T17:06:25Z" finished-at="2016-02-12T17:06:25Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="43" started-at="2016-02-12T17:06:25Z" finished-at="2016-02-12T17:06:25Z">
+      <class name="com.psl.fullstack.FullStackProject.AppTest">
+        <test-method status="PASS" signature="testApp()[pri:0, instance:testApp(com.psl.fullstack.FullStackProject.AppTest)]" name="testApp" duration-ms="4" started-at="2016-02-12T22:36:25Z" finished-at="2016-02-12T22:36:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApp -->
+      </class> <!-- com.psl.fullstack.FullStackProject.AppTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>
