@@ -22,7 +22,7 @@ public class BlogHomePage {
 	
 	public WebDriver driver;
 	
-	@FindBy(how = How.PARTIAL_LINK_TEXT, using = "Log in")
+	@FindBy(how = How.LINK_TEXT, using = "Log in")
 	public WebElement login_link;
 	@FindBy(how = How.CLASS_NAME, using = "search-field")
 	public WebElement search_box;
@@ -55,7 +55,7 @@ public class BlogHomePage {
 	
 	public BlogHomePage loadBlogHomePage(){
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get("http://localhost/wordpress/");
+		driver.get("http://localhost:81/wordpress/");
 		return (PageFactory.initElements(driver, BlogHomePage.class));
 
 	}

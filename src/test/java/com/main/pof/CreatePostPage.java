@@ -1,5 +1,6 @@
 package com.main.pof;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
@@ -43,28 +44,38 @@ public class CreatePostPage {
 	}
 	
 	public void createPost(String title){
+		boolean foundAlert;
 		
 		posttitle_textbox.sendKeys(title);
 		driver.switchTo().frame(postbody_frame);
 		driver.switchTo().activeElement().sendKeys(GenericFunctions.createRandomPostBody("Body"));
 		driver.switchTo().defaultContent();
 		WebDriverWait wait = new WebDriverWait(driver, 5);
-		if(wait.until(ExpectedConditions.alertIsPresent())!=null)
-		{
-			Alert alert = driver.switchTo().alert();
-			alert.dismiss();
-		}
-			
 		
+		 try {
+		       wait.until(ExpectedConditions.alertIsPresent());
+		        foundAlert = true;
+		        Alert alert = driver.switchTo().alert();
+		        alert.accept();
+		    } catch (Exception e) {
+		        foundAlert = false;
+		    }
+		try
+		{
+		 publish_button.click();
+		}
+		catch(Exception e)
+		{}
+		 
 		//Need to add explicit wait here
 		//WebDriverWait wait=  new WebDriverWait(driver, 30);
-		wait.until(ExpectedConditions.elementToBeClickable(publish_button)).click();;
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		wait.until(ExpectedConditions.elementToBeClickable(publish_button)).click();;
+//		try {
+//			Thread.sleep(5000);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 
 	}
 }

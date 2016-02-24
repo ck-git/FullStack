@@ -1,64 +1,115 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>TestNG:  Unit Test</title>
-<style type="text/css">
-table caption,table.info_table,table.result,table.passed,table.failed {margin-bottom:10px;border:1px solid #000099;border-collapse:collapse;empty-cells:show;}
-table.info_table td,table.info_table th,table.result td,table.result th,table.passed td,table.passed th,table.failed td,table.failed th {
-border:1px solid #000099;padding:.25em .5em .25em .5em
-}
-table.result th {vertical-align:bottom}
-tr.param th {padding-left:1em;padding-right:1em}
-tr.param td {padding-left:.5em;padding-right:2em}
-td.numi,th.numi,td.numi_attn {
-text-align:right
-}
-tr.total td {font-weight:bold}
-table caption {
-text-align:center;font-weight:bold;
-}
-table.passed tr.stripe td,table tr.passedodd td {background-color: #00AA00;}
-table.passed td,table tr.passedeven td {background-color: #33FF33;}
-table.passed tr.stripe td,table tr.skippedodd td {background-color: #cccccc;}
-table.passed td,table tr.skippedodd td {background-color: #dddddd;}
-table.failed tr.stripe td,table tr.failedodd td,table.result td.numi_attn {background-color: #FF3333;}
-table.failed td,table tr.failedeven td,table.result tr.stripe td.numi_attn {background-color: #DD0000;}
-tr.stripe td,tr.stripe th {background-color: #E6EBF9;}
-p.totop {font-size:85%;text-align:center;border-bottom:2px black solid}
-div.shootout {padding:2em;border:3px #4854A8 solid}
-</style>
-</head>
-<body>
-<table cellspacing="0" cellpadding="0" class="result">
-<tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">5</td><td class="numi">5</td><td class="numi">0</td><td class="numi">0</td><td class="numi">27.1 seconds</td><td class="numi"></td><td class="numi"></td></tr>
-</table>
-<table cellspacing="0" cellpadding="0" class="passed" id="summary">
-<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">Default test &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="5">com.main.testcases.Workflow2</td><td><a href="#m1"><b>verifyHomePage</b>  </a></td><td class="numi">1</td><td>1456243119133</td><td class="numi">182</td></tr><tr class="passedodd"><td><a href="#m2"><b>searchPost</b>  </a></td><td class="numi">1</td><td>1456243119317</td><td class="numi">4146</td></tr><tr class="passedodd"><td><a href="#m3"><b>verifyLinksOnPage</b>  </a></td><td class="numi">2</td><td>1456243123469</td><td class="numi">2029</td></tr><tr class="passedodd"><td><a href="#m4"><b>verifyLinksOnPage</b>  </a></td><td class="numi">2</td><td>1456243123469</td><td class="numi">2029</td></tr><tr class="passedodd"><td><a href="#m5"><b>postComment</b>  </a></td><td class="numi">1</td><td>1456243125507</td><td class="numi">6353</td></tr>
-</table>
-<h1>Default test</h1>
-<h2 id="m1">com.main.testcases.Workflow2:searchPost</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">com.main.testcases.Workflow2:verifyLinksOnPage</h2>
-<table cellspacing="0" cellpadding="0" class="result">
-<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
-<tr class="param stripe"><td>Firstpost</td>
-<td>Secondpost</td>
-</tr>
-</table>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">com.main.testcases.Workflow2:verifyLinksOnPage</h2>
-<table cellspacing="0" cellpadding="0" class="result">
-<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
-<tr class="param stripe"><td>Thirdpost</td>
-<td>Secondpost</td>
-</tr>
-</table>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">com.main.testcases.Workflow2:verifyHomePage</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m5">com.main.testcases.Workflow2:postComment</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-</body></html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>TestNG Report</title><style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}</style></head><body><table><tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr><tr><th colspan="7">Default suite</th></tr><tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num attn">1</td><td class="num">168,913</td><td></td><td></td></tr></table><table><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.main.testcases.TestLogin</td><td><a href="#m0">tearDown</a></td><td rowspan="1">1456332747679</td><td rowspan="1">0</td></tr><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.main.testcases.TestLogin</td><td><a href="#m1">searchPostAfterDeletion</a></td><td rowspan="1">1456332713643</td><td rowspan="1">34029</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.main.testcases.TestLogin</td><td><a href="#m2">addSearchDeletePost</a></td><td rowspan="1">1456332618011</td><td rowspan="1">95630</td></tr></tbody></table><h2>Default test</h2><h3 id="m0">com.main.testcases.TestLogin#tearDown</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Log Out&quot;}
+Command duration or timeout: 30.20 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
+System info: host: &apos;PSNGI3228&apos;, ip: &apos;10.222.35.190&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_31&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=43.0.4, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 1ffae689-c450-45d4-8df7-c45206a32d38
+*** Element info: {Using=link text, value=Log Out}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy7.click(Unknown Source)
+	at com.main.pof.DashboardPage.signOut(DashboardPage.java:41)
+	at com.main.testcases.TestLogin.tearDown(TestLogin.java:117)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:517)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:140)
+	at org.testng.TestRunner.afterRun(TestRunner.java:1019)
+	at org.testng.TestRunner.run(TestRunner.java:625)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Log Out&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
+System info: host: &apos;PSNGI3228&apos;, ip: &apos;10.222.35.190&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_31&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ANKIT_~1/AppData/Local/Temp/anonymous7795226730925580623webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10723)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/ANKIT_~1/AppData/Local/Temp/anonymous7795226730925580623webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:623)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m1">com.main.testcases.TestLogin#searchPostAfterDeletion</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Log in&quot;}
+Command duration or timeout: 30.16 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
+System info: host: &apos;PSNGI3228&apos;, ip: &apos;10.222.35.190&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_31&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=43.0.4, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 1ffae689-c450-45d4-8df7-c45206a32d38
+*** Element info: {Using=link text, value=Log in}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy7.getCoordinates(Unknown Source)
+	at org.openqa.selenium.interactions.internal.MouseAction.getActionLocation(MouseAction.java:51)
+	at org.openqa.selenium.interactions.MoveMouseAction.perform(MoveMouseAction.java:39)
+	at org.openqa.selenium.interactions.CompositeAction.perform(CompositeAction.java:50)
+	at com.main.pof.BlogHomePage.clickLoginInLink(BlogHomePage.java:68)
+	at com.main.testcases.TestLogin.searchPostAfterDeletion(TestLogin.java:100)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Log in&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
+System info: host: &apos;PSNGI3228&apos;, ip: &apos;10.222.35.190&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_31&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ANKIT_~1/AppData/Local/Temp/anonymous7795226730925580623webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10723)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/ANKIT_~1/AppData/Local/Temp/anonymous7795226730925580623webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:623)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m2">com.main.testcases.TestLogin#addSearchDeletePost</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p></body></html>
