@@ -1,27 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="5" passed="5">
   <reporter-output>
-    <line>
-      <![CDATA[passed]]>
-    </line>
   </reporter-output>
-  <suite name="WordPressAutomation" duration-ms="34" started-at="2016-02-12T17:07:27Z" finished-at="2016-02-12T17:07:27Z">
+  <suite name="Default suite" duration-ms="27102" started-at="2016-02-23T15:58:26Z" finished-at="2016-02-23T15:58:53Z">
     <groups>
     </groups>
-    <test name="test1" duration-ms="34" started-at="2016-02-12T17:07:27Z" finished-at="2016-02-12T17:07:27Z">
-      <class name="com.psl.fullstack.FullStackProject.Sample">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.psl.fullstack.FullStackProject.Sample@e9a829]" name="beforeClass" is-config="true" duration-ms="10" started-at="2016-02-12T22:37:27Z" finished-at="2016-02-12T22:37:27Z">
+    <test name="Default test" duration-ms="27102" started-at="2016-02-23T15:58:26Z" finished-at="2016-02-23T15:58:53Z">
+      <class name="com.main.testcases.Workflow2">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.main.testcases.Workflow2@152f6e2]" name="launchBrowser" is-config="true" duration-ms="12929" started-at="2016-02-23T21:28:26Z" finished-at="2016-02-23T21:28:39Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="f()[pri:0, instance:com.psl.fullstack.FullStackProject.Sample@e9a829]" name="f" duration-ms="7" started-at="2016-02-12T22:37:27Z" finished-at="2016-02-12T22:37:27Z">
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="verifyHomePage()[pri:0, instance:com.main.testcases.Workflow2@152f6e2]" name="verifyHomePage" duration-ms="182" started-at="2016-02-23T21:28:39Z" finished-at="2016-02-23T21:28:39Z">
           <reporter-output>
-            <line>
-              <![CDATA[passed]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- f -->
-      </class> <!-- com.psl.fullstack.FullStackProject.Sample -->
-    </test> <!-- test1 -->
-  </suite> <!-- WordPressAutomation -->
+        </test-method> <!-- verifyHomePage -->
+        <test-method status="PASS" signature="searchPost()[pri:0, instance:com.main.testcases.Workflow2@152f6e2]" name="searchPost" duration-ms="4146" started-at="2016-02-23T21:28:39Z" finished-at="2016-02-23T21:28:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchPost -->
+        <test-method status="PASS" signature="verifyLinksOnPage(java.lang.String, java.lang.String)[pri:0, instance:com.main.testcases.Workflow2@152f6e2]" name="verifyLinksOnPage" duration-ms="344" started-at="2016-02-23T21:28:43Z" data-provider="DP3" finished-at="2016-02-23T21:28:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Firstpost]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Secondpost]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLinksOnPage -->
+        <test-method status="PASS" signature="verifyLinksOnPage(java.lang.String, java.lang.String)[pri:0, instance:com.main.testcases.Workflow2@152f6e2]" name="verifyLinksOnPage" duration-ms="1683" started-at="2016-02-23T21:28:43Z" data-provider="DP3" finished-at="2016-02-23T21:28:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Thirdpost]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Secondpost]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLinksOnPage -->
+        <test-method status="PASS" signature="postComment()[pri:0, instance:com.main.testcases.Workflow2@152f6e2]" name="postComment" duration-ms="6353" started-at="2016-02-23T21:28:45Z" finished-at="2016-02-23T21:28:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postComment -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.main.testcases.Workflow2@152f6e2]" name="tearDown" is-config="true" duration-ms="1422" started-at="2016-02-23T21:28:51Z" finished-at="2016-02-23T21:28:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.main.testcases.Workflow2 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
