@@ -30,7 +30,7 @@ public class TestLogin {
 		bloghomepage = new BlogHomePage(driver);
 	}
 	
-	@org.testng.annotations.DataProvider(name = "DP1")
+	/*@org.testng.annotations.DataProvider(name = "DP1")
 	  public Object[][] createData1() throws Exception {
 		  
 	      Object[][] retObjArr= GenericFunctions.getCSV("TestData/login.csv");
@@ -46,20 +46,26 @@ public class TestLogin {
 		Assert.assertTrue(GenericFunctions.validateText(driver,"Dashboard"));
 		Assert.assertTrue(GenericFunctions.VerifyPageHeading(dashboardpage.admin_menu, "Howdy, admin"));
 		//dashboardpage.signOut();
-	}
+	}*/
     
-//    @Test
-//    public void createNewPost(){
-//    	bloghomepage = bloghomepage.loadBlogHomePage();
-//		loginpage = bloghomepage.clickLoginInLink();
-//		dashboardpage= loginpage.loginAction("admin","admin");
-//		createpostpage = new CreatePostPage(driver);
-//		createpostpage = createpostpage.loadCreatePostPage();
-//		createpostpage.createPost("FirstPost");
-//    	
-//    	
-//    }
-//	
+    @org.testng.annotations.DataProvider(name = "DP2")
+	  public Object[][] createData2() throws Exception {
+		  
+	      Object[][] retObjArr= GenericFunctions.getCSV("TestData/CreatePosttitles.csv");
+	      return(retObjArr);
+	  }
+    
+    @Test(dataProvider = "DP2")
+    public void createNewPost(String post_title){
+   	bloghomepage = bloghomepage.loadBlogHomePage();
+   	loginpage = bloghomepage.clickLoginInLink();
+	dashboardpage= loginpage.loginAction("admin","admin");
+	createpostpage = new CreatePostPage(driver);
+	createpostpage = createpostpage.loadCreatePostPage();
+	createpostpage.createPost(post_title);  	
+  	
+   }
+	
     /*@Test
     public void searchPostOnUI(){
     	

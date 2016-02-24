@@ -46,6 +46,8 @@ public class BlogHomePage {
 	public WebElement post_edit_link;
 	@FindBy(how = How.XPATH, using = "//body//h1")
 	public WebElement search_result_text;
+	@FindBy(how = How.XPATH, using = "//div[@class='reply']/a")
+	public WebElement reply_button;
 	
 	public BlogHomePage(WebDriver driver) {
 		this.driver = driver;
@@ -67,15 +69,26 @@ public class BlogHomePage {
 		return (PageFactory.initElements(driver,LoginPage.class));
 		
 	}
-	public void postComment(){
+	public Boolean postComment(){
 		
 		comment_textbox.sendKeys("Comment");
 		name_textbox.sendKeys("name");
-		email_textbox.sendKeys("email");
+		email_textbox.sendKeys("test.test1@gmail.com");
 		post_comment_button.click();
+		//add explicit wait for reply button
+		if (reply_button.isDisplayed()){
+			return true;
+		}
+		else{
+			return false;
+			//Take screenshot
+		}
+			
+		
 	}
 	public Boolean searchPost(String titleToSearch)
 	{
+		search_box.clear();
 		search_box.sendKeys(titleToSearch);
 		search_button.click();
 		if(search_result_text.getText().contains("Nothing Found")){
@@ -86,5 +99,23 @@ public class BlogHomePage {
 		}
 				
 	}
+	
+	public Boolean verifyLinkUnderRecentPost(String post_title){
+		
+		if(driver.findElement(By.linkText(post_title)).isDisplayed()){
+			return true;
+		}
+		else
+			return false;
+		
+	}
+	public void visitAnotherPost(String post_title){
+		
+		driver.findElement(By.linkText(post_title)).click();
+	}
+	
+	
+	
+	
 	
 }
