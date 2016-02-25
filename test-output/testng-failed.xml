@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.main.testcases.Workflow2">
+      <class name="com.main.testcases.TestLogin">
         <methods>
           <include name="launchBrowser"/>
-          <include name="postComment"/>
           <include name="tearDown"/>
+          <include name="searchPostAfterDeletion"/>
         </methods>
-      </class> <!-- com.main.testcases.Workflow2 -->
+      </class> <!-- com.main.testcases.TestLogin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

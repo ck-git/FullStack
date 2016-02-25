@@ -30,23 +30,23 @@ public class TestLogin {
 		bloghomepage = new BlogHomePage(driver);
 	}
 	
-	/*@org.testng.annotations.DataProvider(name = "DP1")
+	@org.testng.annotations.DataProvider(name = "DP1")
 	  public Object[][] createData1() throws Exception {
 		  
 	      Object[][] retObjArr= GenericFunctions.getCSV("TestData/login.csv");
 	      return(retObjArr);
 	  }
 	 
-    @Test (dataProvider = "DP1")
+    @Test (dataProvider = "DP1", priority = 1)
 	public void testLoginSuccess(String username, String password){
     	
 		bloghomepage = bloghomepage.loadBlogHomePage();
 		loginpage = bloghomepage.clickLoginInLink();
 		dashboardpage= loginpage.loginAction(username, password);
 		Assert.assertTrue(GenericFunctions.validateText(driver,"Dashboard"));
-		Assert.assertTrue(GenericFunctions.VerifyPageHeading(dashboardpage.admin_menu, "Howdy, admin"));
-		//dashboardpage.signOut();
-	}*/
+		Assert.assertTrue(GenericFunctions.VerifyPageHeading(dashboardpage.admin_menu, "Howdy, "+username));
+		dashboardpage.signOut();
+	}
     
     @org.testng.annotations.DataProvider(name = "DP2")
 	  public Object[][] createData2() throws Exception {
@@ -55,7 +55,7 @@ public class TestLogin {
 	      return(retObjArr);
 	  }
     
-    @Test(dataProvider = "DP2")
+    @Test(dataProvider = "DP2", priority = 2)
     public void createNewPost(String post_title){
    	bloghomepage = bloghomepage.loadBlogHomePage();
    	loginpage = bloghomepage.clickLoginInLink();
@@ -63,23 +63,20 @@ public class TestLogin {
 	createpostpage = new CreatePostPage(driver);
 	createpostpage = createpostpage.loadCreatePostPage();
 	createpostpage.createPost(post_title);  	
-  	
+	dashboardpage.signOut();
    }
 	
-    /*@Test
+    @Test(priority = 3)
     public void searchPostOnUI(){
-    	
     	bloghomepage = bloghomepage.loadBlogHomePage();
 		loginpage = bloghomepage.clickLoginInLink();
 		dashboardpage= loginpage.loginAction("admin","admin");
     	allpostspage = new AllPostsPage(driver);
     	allpostspage = allpostspage.loadAllPostsPage();
-    	allpostspage.searchPost("faltu");
-    	
-    	
+    	allpostspage.searchPost("faltu");	
     }
     
-    @Test
+    @Test(priority = 4)
     public void addSearchDeletePost(){
     	bloghomepage = bloghomepage.loadBlogHomePage();
 		loginpage = bloghomepage.clickLoginInLink();
@@ -90,10 +87,10 @@ public class TestLogin {
 		allpostspage = new AllPostsPage(driver);
     	allpostspage = allpostspage.loadAllPostsPage();
     	allpostspage.searchPost("Post To be Deleted");
-    	//Call Function to delete post
+    	allpostspage.deletePost("Post To be Deleted");
     }
     
-    @Test
+    @Test(priority = 5)
     public void searchPostAfterDeletion(){
     	bloghomepage = bloghomepage.loadBlogHomePage();
 		loginpage = bloghomepage.clickLoginInLink();
@@ -101,11 +98,12 @@ public class TestLogin {
 		createpostpage = new CreatePostPage(driver);
       	createpostpage = createpostpage.loadCreatePostPage();
 		createpostpage.createPost("Search postafter deletion");
-    	//Call Function to delete post
+    	
 		allpostspage = new AllPostsPage(driver);
     	allpostspage = allpostspage.loadAllPostsPage();
+    	allpostspage.deletePost("Search postafter deletion");
     	allpostspage.searchPost("Search postafter deletion");
-    }*/
+    }
     
     
     
