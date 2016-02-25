@@ -1,21 +1,14 @@
 package com.main.pof;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-
-import com.gargoylesoftware.htmlunit.ElementNotFoundException;
 
 
 public class BlogHomePage {
@@ -54,23 +47,25 @@ public class BlogHomePage {
 	}
 	
 	public BlogHomePage loadBlogHomePage(){
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get("http://localhost:81/wordpress/");
+		//driver.get("http://localhost:81/wordpress/");
+		driver.get("http://10.51.231.3/wordpress/");
 		return (PageFactory.initElements(driver, BlogHomePage.class));
-
 	}
 	
 	public LoginPage clickLoginInLink(){
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Actions builder = new Actions(this.driver);
+/*		Actions builder = new Actions(this.driver);
 		builder.moveToElement(login_link);
 		builder.click();
-		builder.build().perform();
+		builder.build().perform();*/
+		
+		JavascriptExecutor jse = (JavascriptExecutor) driver;
+		jse.executeScript("arguments[0].scrollIntoView(true);", login_link);
+		login_link.click();
 		return (PageFactory.initElements(driver,LoginPage.class));
-		
 	}
-	public Boolean postComment(){
-		
+	
+	public Boolean postComment(){	
 		comment_textbox.sendKeys("Comment");
 		name_textbox.sendKeys("name");
 		email_textbox.sendKeys("test.test1@gmail.com");
@@ -106,16 +101,12 @@ public class BlogHomePage {
 			return true;
 		}
 		else
-			return false;
-		
+			return false;	
 	}
+	
 	public void visitAnotherPost(String post_title){
 		
 		driver.findElement(By.linkText(post_title)).click();
 	}
-	
-	
-	
-	
-	
+		
 }

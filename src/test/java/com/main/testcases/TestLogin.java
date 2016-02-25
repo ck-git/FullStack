@@ -1,34 +1,21 @@
 package com.main.testcases;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import java.util.concurrent.TimeUnit;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.main.pof.AllPostsPage;
-import com.main.pof.BlogHomePage;
 import com.main.pof.CreatePostPage;
 import com.main.pof.DashboardPage;
 import com.main.pof.GenericFunctions;
-import com.main.pof.LoginPage;
 
-public class TestLogin {
+public class TestLogin extends GenericFunctions{
 	
-	public WebDriver driver;
-	BlogHomePage bloghomepage;
-	LoginPage loginpage;
 	DashboardPage dashboardpage;
 	CreatePostPage createpostpage;
 	AllPostsPage allpostspage;
-	
-	
-	@BeforeTest
-	public void launchBrowser(){
-		driver= new FirefoxDriver();
-		bloghomepage = new BlogHomePage(driver);
-	}
 	
 	@org.testng.annotations.DataProvider(name = "DP1")
 	  public Object[][] createData1() throws Exception {
@@ -37,7 +24,14 @@ public class TestLogin {
 	      return(retObjArr);
 	  }
 	 
-    @Test (dataProvider = "DP1", priority = 1)
+	 @org.testng.annotations.DataProvider(name = "DP2")
+	  public Object[][] createData2() throws Exception {
+		  
+	      Object[][] retObjArr= GenericFunctions.getCSV("TestData/CreatePosttitles.csv");
+	      return(retObjArr);
+	  }
+	 
+   @Test (dataProvider = "DP1", priority = 1)
 	public void testLoginSuccess(String username, String password){
     	
 		bloghomepage = bloghomepage.loadBlogHomePage();
@@ -48,40 +42,36 @@ public class TestLogin {
 		dashboardpage.signOut();
 	}
     
-    @org.testng.annotations.DataProvider(name = "DP2")
-	  public Object[][] createData2() throws Exception {
-		  
-	      Object[][] retObjArr= GenericFunctions.getCSV("TestData/CreatePosttitles.csv");
-	      return(retObjArr);
-	  }
-    
     @Test(dataProvider = "DP2", priority = 2)
     public void createNewPost(String post_title){
-   	bloghomepage = bloghomepage.loadBlogHomePage();
-   	loginpage = bloghomepage.clickLoginInLink();
-	dashboardpage= loginpage.loginAction("admin","admin");
-	createpostpage = new CreatePostPage(driver);
-	createpostpage = createpostpage.loadCreatePostPage();
-	createpostpage.createPost(post_title);  	
-	dashboardpage.signOut();
+    	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    	bloghomepage = bloghomepage.loadBlogHomePage();
+	   	loginpage = bloghomepage.clickLoginInLink();
+		dashboardpage= loginpage.loginAction("admin","Siteadmin@123");
+		createpostpage = new CreatePostPage(driver);
+		createpostpage = createpostpage.loadCreatePostPage();
+		createpostpage.createPost(post_title);  	
+		dashboardpage.signOut();
    }
 	
-    @Test(priority = 3)
-    public void searchPostOnUI(){
+    @Test(dataProvider = "DP1", priority = 3)
+    public void searchPostOnUI(String username, String password){
     	bloghomepage = bloghomepage.loadBlogHomePage();
 		loginpage = bloghomepage.clickLoginInLink();
-		dashboardpage= loginpage.loginAction("admin","admin");
+		dashboardpage= loginpage.loginAction(username,password);
     	allpostspage = new AllPostsPage(driver);
     	allpostspage = allpostspage.loadAllPostsPage();
-    	allpostspage.searchPost("faltu");	
+    	allpostspage.searchPost("Non-existing post");	
     }
     
     @Test(priority = 4)
     public void addSearchDeletePost(){
-    	bloghomepage = bloghomepage.loadBlogHomePage();
+  
+    /*	bloghomepage = bloghomepage.loadBlogHomePage();
 		loginpage = bloghomepage.clickLoginInLink();
-		dashboardpage= loginpage.loginAction("admin","admin");
-		createpostpage = new CreatePostPage(driver);
+		dashboardpage= loginpage.loginAction("admin","Siteadmin@123");*/
+		
+    	createpostpage = new CreatePostPage(driver);
       	createpostpage = createpostpage.loadCreatePostPage();
 		createpostpage.createPost("Post To be Deleted");
 		allpostspage = new AllPostsPage(driver);
@@ -92,37 +82,21 @@ public class TestLogin {
     
     @Test(priority = 5)
     public void searchPostAfterDeletion(){
-    	bloghomepage = bloghomepage.loadBlogHomePage();
-		loginpage = bloghomepage.clickLoginInLink();
-		dashboardpage= loginpage.loginAction("admin","admin");
-		createpostpage = new CreatePostPage(driver);
+    	createpostpage = new CreatePostPage(driver);
       	createpostpage = createpostpage.loadCreatePostPage();
 		createpostpage.createPost("Search postafter deletion");
-    	
 		allpostspage = new AllPostsPage(driver);
     	allpostspage = allpostspage.loadAllPostsPage();
+    	allpostspage.searchPost("Search postafter deletion");
     	allpostspage.deletePost("Search postafter deletion");
     	allpostspage.searchPost("Search postafter deletion");
-    }
-    
-    
-    
-    
-    @AfterTest
-    public void tearDown(){
     	dashboardpage.signOut();
-    	driver.close();
-    	driver.quit();
-    	
-    	
-    	
     }
     
-    
-    
-    
-    
-    
-    
-	
+/*    @AfterTest
+    public void tearDown(){
+    	driver.close();
+    	driver.quit();    	
+    }   
+*/
 }

@@ -1,22 +1,55 @@
 package com.main.pof;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
-import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 
 import au.com.bytecode.opencsv.CSVReader;
 
 
 public class GenericFunctions {
+	
+	public WebDriver driver = null;
+	public BlogHomePage bloghomepage;
+	public LoginPage loginpage;
+	
+	@Parameters({"browser","ip","port"})
+	@BeforeClass
+	public void setup(String browser, String ip, String port) throws MalformedURLException{
+		
+	/*	if (browser.contains("internet")){
+			DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
+			capabilities.set(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,true);
+			driver = new RemoteWebDriver(new URL("http://".concat(ip).concat(":").concat(port).concat("/wd/hub")),capabilities);
+		}
+		else {*/		
+			
+		DesiredCapabilities capability = new DesiredCapabilities();
+		capability.setBrowserName(browser);			
+		driver = new RemoteWebDriver(new URL("http://".concat(ip).concat(":").concat(port).concat("/wd/hub")),capability);
+		driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
+		driver.manage().window().maximize();		
+		bloghomepage = new BlogHomePage(driver);
+	}
+	
+	@AfterClass
+	public void tearDown(){
+		driver.close();
+		driver.quit();
+	}
 	
 	public static Boolean VerifyPageTitle(WebDriver driver,String titleToVerify)
     {
@@ -82,10 +115,6 @@ public class GenericFunctions {
 	}
 	
 	
-	
-	
-	
-	
 	public static String[][] getCSV(String filePath) throws Exception{
 		  
 		String[][] tabArray = null;
@@ -107,8 +136,10 @@ public class GenericFunctions {
 				tabArray[i-1][j] = nextData[j];
 			}
 		}
+		reader.close();
 		return tabArray;
 	}
+	
 }	
 	
 	
