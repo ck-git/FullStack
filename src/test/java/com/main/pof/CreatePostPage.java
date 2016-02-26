@@ -14,8 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CreatePostPage {
 	
-	public WebDriver driver;
-	
+	public WebDriver driver;	
 	
 	@FindBy(how = How.ID, using = "title")
 	public WebElement posttitle_textbox;
@@ -41,12 +40,12 @@ public class CreatePostPage {
 	}
 	
 	public CreatePostPage loadCreatePostPage(){
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		LeftMenuPanel leftmenupanel=PageFactory.initElements(driver, LeftMenuPanel.class);
 		Actions action = new Actions(driver);
 		action.moveToElement(leftmenupanel.posts_menu).build().perform();
 		leftmenupanel.add_new_post.click();
 		return (PageFactory.initElements(driver, CreatePostPage.class));
-
 	}
 	
 	public void createPost(String title){
@@ -73,8 +72,7 @@ public class CreatePostPage {
 		catch(Exception e){
 			e.printStackTrace();
 			}
-		
-		//wait.until(ExpectedConditions.elementToBeClickable(update_button));
+	
 		
 		//Need to add explicit wait here
 		//WebDriverWait wait=  new WebDriverWait(driver, 30);

@@ -10,6 +10,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -30,16 +31,34 @@ public class GenericFunctions {
 	@BeforeClass
 	public void setup(String browser, String ip, String port) throws MalformedURLException{
 		
-	/*	if (browser.contains("internet")){
-			DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
-			capabilities.set(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,true);
-			driver = new RemoteWebDriver(new URL("http://".concat(ip).concat(":").concat(port).concat("/wd/hub")),capabilities);
-		}
-		else {*/		
-			
-		DesiredCapabilities capability = new DesiredCapabilities();
+		/*DesiredCapabilities capability = new DesiredCapabilities();
 		capability.setBrowserName(browser);			
-		driver = new RemoteWebDriver(new URL("http://".concat(ip).concat(":").concat(port).concat("/wd/hub")),capability);
+		driver = new RemoteWebDriver(new URL("http://".concat(ip).concat(":").concat(port).concat("/wd/hub")),capability);*/
+		
+		//CHANGE1
+		DesiredCapabilities capability;
+		
+		if (browser.equalsIgnoreCase("firefox")){
+			capability = DesiredCapabilities.firefox();
+			capability.setBrowserName("firefox");
+			driver = new RemoteWebDriver(new URL("http://".concat(ip).concat(":").concat(port).concat("/wd/hub")),capability);
+			
+		}
+		else if (browser.equalsIgnoreCase("chrome")){
+			capability = DesiredCapabilities.chrome();
+			capability.setBrowserName("chrome");
+			driver = new RemoteWebDriver(new URL("http://".concat(ip).concat(":").concat(port).concat("/wd/hub")),capability);	
+		}
+		else if ((browser.equalsIgnoreCase("internet explorer")) || (browser.equalsIgnoreCase("ie"))){
+			capability = DesiredCapabilities.internetExplorer();
+			capability.setBrowserName("internet explorer");
+			capability.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,true);
+			driver = new RemoteWebDriver(new URL("http://".concat(ip).concat(":").concat(port).concat("/wd/hub")),capability);
+		}
+		else{
+			driver = new FirefoxDriver();
+		}
+		
 		driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
 		driver.manage().window().maximize();		
 		bloghomepage = new BlogHomePage(driver);
@@ -51,8 +70,7 @@ public class GenericFunctions {
 		driver.quit();
 	}
 	
-	public static Boolean VerifyPageTitle(WebDriver driver,String titleToVerify)
-    {
+	public static Boolean VerifyPageTitle(WebDriver driver,String titleToVerify){
            String pageTitle;
            pageTitle = driver.getTitle();
 
@@ -62,8 +80,7 @@ public class GenericFunctions {
                   return false;
     }
     
-    public static Boolean VerifyPageHeading(WebElement pageHeadingObject,String headingToVerify)
-    {
+    public static Boolean VerifyPageHeading(WebElement pageHeadingObject,String headingToVerify){
            String pageHeading;
            pageHeading = pageHeadingObject.getText();
 
@@ -73,8 +90,7 @@ public class GenericFunctions {
                   return false;
     }
       
-    public static Boolean VerifyLinksOnPage(WebElement hyperlinkObject,String linkUrlToVerify)
-    {
+    public static Boolean VerifyLinksOnPage(WebElement hyperlinkObject,String linkUrlToVerify){
            String hyperLink;
            hyperLink = hyperlinkObject.getAttribute("href");
 
@@ -95,8 +111,7 @@ public class GenericFunctions {
 		
 	}
 	
-	public static Boolean VerifyPostBody(WebElement post_body,String bodyToVerify)
-    {
+	public static Boolean VerifyPostBody(WebElement post_body,String bodyToVerify){
            String body;
            body = post_body.getText();
 
@@ -106,8 +121,7 @@ public class GenericFunctions {
                   return false;
     }
 	
-	public static String createRandomPostBody(String body)
-	{
+	public static String createRandomPostBody(String body){
 		 Random r= new Random();
 		 int i = r.nextInt();
 		 body = body + " " + String.valueOf(i) ;
@@ -141,9 +155,3 @@ public class GenericFunctions {
 	}
 	
 }	
-	
-	
-	
-
-
-
