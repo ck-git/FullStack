@@ -1,6 +1,5 @@
 package com.main.pof;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -28,22 +27,26 @@ public class DashboardPage {
 	
 	
 	public void signOut(){
-		
 		Actions action = new Actions(driver);
 		action.moveToElement(admin_menu).build().perform();
-		WebDriverWait wait=  new WebDriverWait(driver, 30);
+		
+//		wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText("Log Out")));//SyncChange2
+		
 //		if(wait.until(ExpectedConditions.alertIsPresent())!=null)
 //		{
 //			Alert alert = driver.switchTo().alert();
 //			alert.dismiss();
 //		}
-//		wait.until(ExpectedConditions.elementToBeClickable(log_out_link)).click();;
 		log_out_link.click();
+		WebDriverWait wait=  new WebDriverWait(driver,30);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//p[@class='message']")));//SyncChange3
 		
+/*		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
 	}
-	
-	
-	
-	
-	
+		
 }
