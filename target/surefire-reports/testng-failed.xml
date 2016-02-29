@@ -1,9 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite verbose="0" name="Failed suite [Command line suite]" junit="true">
-  <test name="Command line test" preserve-order="false">
+<suite thread-count="3" verbose="0" name="Failed suite [Suite]" parallel="tests">
+  <parameter name="port" value="5555"/>
+  <parameter name="browser" value="internet explorer"/>
+  <parameter name="ip" value="10.51.231.3"/>
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test name="Test on Windows 7 - Internet Explorer(failed)" parallel="tests">
+    <parameter name="port" value="5555"/>
+    <parameter name="browser" value="internet explorer"/>
+    <parameter name="ip" value="10.51.231.3"/>
     <classes>
-      <class name="com.psl.fullstack.FullStackProject.AppTest"/>
+      <class name="com.main.testcases.Workflow1">
+        <methods>
+          <include name="createNewPost"/>
+          <include name="addSearchDeletePost"/>
+          <include name="searchPostOnUI"/>
+          <include name="testLoginSuccess" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="takeScreenShotOnFailure"/>
+          <include name="takeScreenShotOnFailure"/>
+          <include name="takeScreenShotOnFailure"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="login" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.main.testcases.Workflow1 -->
+      <class name="com.main.testcases.Workflow2">
+        <methods>
+          <include name="searchPost"/>
+          <include name="postComment"/>
+          <include name="tearDown"/>
+          <include name="verifyHomePage"/>
+          <include name="verifyLinksOnPage"/>
+          <include name="takeScreenShotOnFailure"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.main.testcases.Workflow2 -->
     </classes>
-  </test> <!-- Command line test -->
-</suite> <!-- Failed suite [Command line suite] -->
+  </test> <!-- Test on Windows 7 - Internet Explorer(failed) -->
+  <test name="Test on Linux - Firefox(failed)" parallel="tests">
+    <parameter name="port" value="8888"/>
+    <parameter name="browser" value="firefox"/>
+    <parameter name="ip" value="10.222.115.75"/>
+    <classes>
+      <class name="com.main.testcases.Workflow1">
+        <methods>
+          <include name="createNewPost" invocation-numbers="0 1"/>
+          <include name="addSearchDeletePost"/>
+          <include name="searchPostOnUI"/>
+          <include name="testLoginSuccess" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="takeScreenShotOnFailure"/>
+          <include name="takeScreenShotOnFailure"/>
+          <include name="takeScreenShotOnFailure"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="login" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.main.testcases.Workflow1 -->
+      <class name="com.main.testcases.Workflow2">
+        <methods>
+          <include name="searchPost"/>
+          <include name="postComment"/>
+          <include name="tearDown"/>
+          <include name="verifyHomePage"/>
+          <include name="verifyLinksOnPage"/>
+          <include name="takeScreenShotOnFailure"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.main.testcases.Workflow2 -->
+    </classes>
+  </test> <!-- Test on Linux - Firefox(failed) -->
+  <test name="Test on Windows 7 - chrome(failed)" parallel="tests">
+    <parameter name="port" value="6666"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="ip" value="10.51.230.251"/>
+    <classes>
+      <class name="com.main.testcases.Workflow1">
+        <methods>
+          <include name="testLoginSuccess" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="takeScreenShotOnFailure"/>
+          <include name="takeScreenShotOnFailure"/>
+          <include name="takeScreenShotOnFailure"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.main.testcases.Workflow1 -->
+      <class name="com.main.testcases.Workflow2">
+        <methods>
+          <include name="searchPost"/>
+          <include name="tearDown"/>
+          <include name="takeScreenShotOnFailure"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.main.testcases.Workflow2 -->
+    </classes>
+  </test> <!-- Test on Windows 7 - chrome(failed) -->
+</suite> <!-- Failed suite [Suite] -->

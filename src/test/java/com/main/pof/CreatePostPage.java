@@ -50,9 +50,10 @@ public class CreatePostPage {
 	
 	public void createPost(String title){
 		boolean foundAlert;
+		posttitle_textbox.clear();
 		posttitle_textbox.sendKeys(title);
 		driver.switchTo().frame(postbody_frame);
-		driver.switchTo().activeElement().sendKeys(GenericFunctions.createRandomPostBody("Body"));
+		driver.switchTo().activeElement().sendKeys(GenericFunctions.createRandomPostBody("This is post body"));
 		driver.switchTo().defaultContent();
 		
 		WebDriverWait wait = new WebDriverWait(driver, 5);		
@@ -74,15 +75,7 @@ public class CreatePostPage {
 			}
 	
 		
-		//Need to add explicit wait here
-		//WebDriverWait wait=  new WebDriverWait(driver, 30);
-//		wait.until(ExpectedConditions.elementToBeClickable(publish_button)).click();;
-//		try {
-//			Thread.sleep(5000);
-//		} catch (InterruptedException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+
 
 	}
 }

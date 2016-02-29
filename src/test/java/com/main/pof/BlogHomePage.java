@@ -21,7 +21,7 @@ public class BlogHomePage {
 	public WebElement search_box;
 	@FindBy(how = How.XPATH, using = "//section[1]/form/button")
 	public WebElement search_button;
-	@FindBy(how = How.LINK_TEXT, using = "My Blog")
+	@FindBy(how = How.LINK_TEXT, using = "QE Full Stack")
 	public WebElement my_blog_link;
 	@FindBy(how = How.ID, using = "comment")
 	public WebElement comment_textbox;
@@ -41,6 +41,8 @@ public class BlogHomePage {
 	public WebElement search_result_text;
 	@FindBy(how = How.XPATH, using = "//div[@class='reply']/a")
 	public WebElement reply_button;
+	@FindBy(how = How.XPATH, using = "//*[@id='recent-posts-2']/ul/li[1]/a")
+	public WebElement recent_first_post;
 	
 	public BlogHomePage(WebDriver driver) {
 		this.driver = driver;
@@ -48,7 +50,6 @@ public class BlogHomePage {
 	
 	
 	public BlogHomePage loadBlogHomePage(){
-		//driver.get("http://localhost:81/wordpress/");
 		driver.get("http://10.51.231.3/wordpress/");
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.elementToBeClickable(By.className("search-field")));//SyncChange1
@@ -56,11 +57,7 @@ public class BlogHomePage {
 	}
 	
 	public LoginPage clickLoginInLink(){
-		
-/*		Actions builder = new Actions(this.driver);
-		builder.moveToElement(login_link);
-		builder.click();
-		builder.build().perform();*/
+
 		
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 		jse.executeScript("arguments[0].scrollIntoView(true);", login_link);
@@ -80,13 +77,12 @@ public class BlogHomePage {
 		email_textbox.clear();
 		email_textbox.sendKeys("test.test1@gmail.com");
 		post_comment_button.click();
-		//add explicit wait for reply button
+		
 		if (reply_button.isDisplayed()){
 			return true;
 		}
 		else{
 			return false;
-			//Take screenshot
 		}
 			
 		

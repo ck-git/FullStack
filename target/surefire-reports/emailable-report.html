@@ -31,14 +31,1011 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Command line test</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Test on Windows 7 - Internet Explorer</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">8</td><td class="numi_attn">2</td><td class="numi">150.1 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em">Test on Linux - Firefox</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">4</td><td class="numi_attn">6</td><td class="numi">343.8 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Test on Windows 7 - chrome</td><td class="numi">8</td><td class="numi">8</td><td class="numi">0</td><td class="numi_attn">2</td><td class="numi">353.8 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="total"><td>Total</td>
+<td class="numi">8</td><td class="numi">8</td><td class="numi_attn">12</td><td class="numi_attn">10</td><td class="numi">353.8 seconds</td><td colspan="2">&nbsp;</td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">Command line test &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="1">com.psl.fullstack.FullStackProject.AppTest</td><td><a href="#m1"><b>testApp</b>  </a></td><td class="numi">1</td><td>1455296785654</td><td class="numi">4</td></tr>
+<tr><th colspan="4">Test on Windows 7 - Internet Explorer &#8212; failed (configuration methods)</th></tr>
+<tr class="failedodd"><td rowspan="2">com.main.testcases.Workflow1</td><td><a href="#m1"><b>takeScreenShotOnFailure</b>  </a></td><td class="numi">1</td><td>1456770307572</td><td class="numi">0</td></tr><tr class="failedodd"><td><a href="#m2"><b>takeScreenShotOnFailure</b>  </a></td><td class="numi">1</td><td>1456770307572</td><td class="numi">0</td></tr>
+<tr><th colspan="4">Test on Windows 7 - Internet Explorer &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="2">com.main.testcases.Workflow1</td><td><a href="#m3"><b>login</b>  </a></td><td class="numi">1</td><td>1456770240781</td><td class="numi">66774</td></tr><tr class="failedodd"><td><a href="#m4"><b>testLoginSuccess</b>  </a></td><td class="numi">1</td><td>1456770169355</td><td class="numi">70296</td></tr>
+<tr><th colspan="4">Test on Windows 7 - Internet Explorer &#8212; skipped (configuration methods)</th></tr>
+<tr class="skippedodd"><td rowspan="2">com.main.testcases.Workflow1</td><td><a href="#m5"><b>takeScreenShotOnFailure</b>  </a></td><td class="numi">4</td><td>1456770307690</td><td class="numi">8</td></tr><tr class="skippedodd"><td><a href="#m6"><b>takeScreenShotOnFailure</b>  </a></td><td class="numi">4</td><td>1456770307690</td><td class="numi">8</td></tr>
+<tr class="skippedeven"><td rowspan="3">com.main.testcases.Workflow2</td><td><a href="#m7"><b>takeScreenShotOnFailure</b>  </a></td><td class="numi">4</td><td>1456770307700</td><td class="numi">37</td></tr><tr class="skippedeven"><td><a href="#m8"><b>tearDown</b>  </a></td><td class="numi">1</td><td>1456770307737</td><td class="numi">0</td></tr><tr class="skippedeven"><td><a href="#m9"><b>setup</b>  </a></td><td class="numi">1</td><td>1456770307699</td><td class="numi">0</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.main.testcases.Workflow1</td><td><a href="#m10"><b>tearDown</b>  </a></td><td class="numi">1</td><td>1456770307698</td><td class="numi">0</td></tr>
+<tr><th colspan="4">Test on Windows 7 - Internet Explorer &#8212; skipped</th></tr>
+<tr class="skippedodd"><td rowspan="3">com.main.testcases.Workflow1</td><td><a href="#m11"><b>addSearchDeletePost</b>  </a></td><td class="numi">1</td><td>1456770307698</td><td class="numi">0</td></tr><tr class="skippedodd"><td><a href="#m12"><b>createNewPost</b>  </a></td><td class="numi">2</td><td>1456770307689</td><td class="numi">2</td></tr><tr class="skippedodd"><td><a href="#m13"><b>createNewPost</b>  </a></td><td class="numi">2</td><td>1456770307689</td><td class="numi">2</td></tr>
+<tr class="skippedeven"><td rowspan="2">com.main.testcases.Workflow2</td><td><a href="#m14"><b>postComment</b>  </a></td><td class="numi">1</td><td>1456770307737</td><td class="numi">0</td></tr><tr class="skippedeven"><td><a href="#m15"><b>searchPost</b>  </a></td><td class="numi">1</td><td>1456770307701</td><td class="numi">0</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.main.testcases.Workflow1</td><td><a href="#m16"><b>searchPostOnUI</b>  </a></td><td class="numi">1</td><td>1456770307697</td><td class="numi">0</td></tr>
+<tr class="skippedeven"><td rowspan="2">com.main.testcases.Workflow2</td><td><a href="#m17"><b>verifyHomePage</b>  </a></td><td class="numi">1</td><td>1456770307699</td><td class="numi">1</td></tr><tr class="skippedeven"><td><a href="#m18"><b>verifyLinksOnPage</b>  </a></td><td class="numi">1</td><td>1456770307735</td><td class="numi">1</td></tr>
+<tr><th colspan="4">Test on Linux - Firefox &#8212; failed (configuration methods)</th></tr>
+<tr class="failedodd"><td rowspan="1">com.main.testcases.Workflow2</td><td><a href="#m19"><b>setup</b>  </a></td><td class="numi">1</td><td>1456770456098</td><td class="numi">0</td></tr>
+<tr><th colspan="4">Test on Linux - Firefox &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="6">com.main.testcases.Workflow1</td><td><a href="#m20"><b>addSearchDeletePost</b>  </a></td><td class="numi">1</td><td>1456770421689</td><td class="numi">32094</td></tr><tr class="failedodd"><td><a href="#m21"><b>createNewPost</b>  </a></td><td class="numi">2</td><td>1456770318887</td><td class="numi">66043</td></tr><tr class="failedodd"><td><a href="#m22"><b>createNewPost</b>  </a></td><td class="numi">2</td><td>1456770318887</td><td class="numi">66043</td></tr><tr class="failedodd"><td><a href="#m23"><b>login</b>  </a></td><td class="numi">1</td><td>1456770251674</td><td class="numi">65090</td></tr><tr class="failedodd"><td><a href="#m24"><b>searchPostOnUI</b>  </a></td><td class="numi">1</td><td>1456770387591</td><td class="numi">31824</td></tr><tr class="failedodd"><td><a href="#m25"><b>testLoginSuccess</b>  </a></td><td class="numi">1</td><td>1456770167166</td><td class="numi">82555</td></tr>
+<tr><th colspan="4">Test on Linux - Firefox &#8212; skipped (configuration methods)</th></tr>
+<tr class="skippedodd"><td rowspan="2">com.main.testcases.Workflow2</td><td><a href="#m26"><b>takeScreenShotOnFailure</b>  </a></td><td class="numi">4</td><td>1456770501417</td><td class="numi">11</td></tr><tr class="skippedodd"><td><a href="#m27"><b>tearDown</b>  </a></td><td class="numi">1</td><td>1456770501428</td><td class="numi">0</td></tr>
+<tr><th colspan="4">Test on Linux - Firefox &#8212; skipped</th></tr>
+<tr class="skippedodd"><td rowspan="4">com.main.testcases.Workflow2</td><td><a href="#m28"><b>postComment</b>  </a></td><td class="numi">1</td><td>1456770501427</td><td class="numi">1</td></tr><tr class="skippedodd"><td><a href="#m29"><b>searchPost</b>  </a></td><td class="numi">1</td><td>1456770501417</td><td class="numi">1</td></tr><tr class="skippedodd"><td><a href="#m30"><b>verifyHomePage</b>  </a></td><td class="numi">1</td><td>1456770501416</td><td class="numi">0</td></tr><tr class="skippedodd"><td><a href="#m31"><b>verifyLinksOnPage</b>  </a></td><td class="numi">1</td><td>1456770501426</td><td class="numi">1</td></tr>
+<tr><th colspan="4">Test on Windows 7 - chrome &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">com.main.testcases.Workflow2</td><td><a href="#m32"><b>searchPost</b>  </a></td><td class="numi">1</td><td>1456770481575</td><td class="numi">10835</td></tr>
+<tr class="failedeven"><td rowspan="1">com.main.testcases.Workflow1</td><td><a href="#m33"><b>testLoginSuccess</b>  </a></td><td class="numi">1</td><td>1456770169191</td><td class="numi">103500</td></tr>
+<tr><th colspan="4">Test on Windows 7 - chrome &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="4">com.main.testcases.Workflow1</td><td><a href="#m34"><b>addSearchDeletePost</b>  </a></td><td class="numi">1</td><td>1456770390194</td><td class="numi">70850</td></tr><tr class="passedodd"><td><a href="#m35"><b>createNewPost</b>  </a></td><td class="numi">2</td><td>1456770288478</td><td class="numi">77722</td></tr><tr class="passedodd"><td><a href="#m36"><b>createNewPost</b>  </a></td><td class="numi">2</td><td>1456770288478</td><td class="numi">77722</td></tr><tr class="passedodd"><td><a href="#m37"><b>login</b>  </a></td><td class="numi">1</td><td>1456770273121</td><td class="numi">15347</td></tr>
+<tr class="passedeven"><td rowspan="1">com.main.testcases.Workflow2</td><td><a href="#m38"><b>postComment</b>  </a></td><td class="numi">1</td><td>1456770495962</td><td class="numi">11460</td></tr>
+<tr class="passedodd"><td rowspan="1">com.main.testcases.Workflow1</td><td><a href="#m39"><b>searchPostOnUI</b>  </a></td><td class="numi">1</td><td>1456770366204</td><td class="numi">23988</td></tr>
+<tr class="passedeven"><td rowspan="2">com.main.testcases.Workflow2</td><td><a href="#m40"><b>verifyHomePage</b>  </a></td><td class="numi">1</td><td>1456770472855</td><td class="numi">8717</td></tr><tr class="passedeven"><td><a href="#m41"><b>verifyLinksOnPage</b>  </a></td><td class="numi">1</td><td>1456770492895</td><td class="numi">3066</td></tr>
 </table>
-<h1>Command line test</h1>
-<h2 id="m1">com.psl.fullstack.FullStackProject.AppTest:testApp</h2>
+<h1>Test on Windows 7 - Internet Explorer</h1>
+<h2 id="m1">com.main.testcases.Workflow1:takeScreenShotOnFailure</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>[TestResult name=login status=FAILURE method=Workflow1.login(java.lang.String, java.lang.String)[pri:0, instance:com.main.testcases.Workflow1@7aa7758e] output={null}]</td>
+<td>internet explorer</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="2">
+<p>Unable to get browser (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20 milliseconds
+Build info: version: &apos;2.51.0&apos;, revision: &apos;1af067d&apos;, time: &apos;2016-02-05 19:15:17&apos;
+System info: host: &apos;HJ-AEPAEP1637&apos;, ip: &apos;10.51.231.3&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+Session ID: 9c9620de-a2cd-470f-8133-67fbcf00aa4a
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{platform=WINDOWS, javascriptEnabled=true, elementScrollBehavior=0, ignoreZoomSetting=false, enablePersistentHover=true, ie.ensureCleanSession=false, browserName=internet explorer, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss, version=11, pageLoadStrategy=normal, ie.usePerProcessProxy=false, cssSelectorsEnabled=true, ignoreProtectedModeSettings=true, requireWindowFocus=false, initialBrowserUrl=http://localhost:19065/, handlesAlerts=true, ie.forceCreateProcessApi=false, nativeEvents=true, browserAttachTimeout=0, ie.browserCommandLineSwitches=, takesScreenshot=true}]
+Command duration or timeout: 61 milliseconds
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
+System info: host: &apos;HJ-AEPAEP1637&apos;, ip: &apos;10.51.231.3&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+Session ID: 7e490c81-70d3-4a08-8278-254e8ff70307
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{platform=WINDOWS, javascriptEnabled=true, elementScrollBehavior=0, ignoreZoomSetting=false, enablePersistentHover=true, ie.ensureCleanSession=false, browserName=internet explorer, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss, webdriver.remote.sessionid=7e490c81-70d3-4a08-8278-254e8ff70307, version=11, pageLoadStrategy=normal, ie.usePerProcessProxy=false, cssSelectorsEnabled=true, ignoreProtectedModeSettings=true, requireWindowFocus=false, initialBrowserUrl=http://localhost:19065/, handlesAlerts=true, ie.forceCreateProcessApi=false, nativeEvents=true, browserAttachTimeout=0, ie.browserCommandLineSwitches=, takesScreenshot=true}]</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:701)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:335)
+<br/>at com.main.pof.GenericFunctions.takeScreenShot(GenericFunctions.java:80)
+<br/>at com.main.pof.GenericFunctions.takeScreenShotOnFailure(GenericFunctions.java:89)
+<br/>at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br/>at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br/>at java.lang.reflect.Method.invoke(Method.java:606)
+<br/>at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+<br/>at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+<br/>at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+<br/>at org.testng.internal.Invoker.invokeMethod(Invoker.java:786)
+<br/>at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+<br/>at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+<br/>at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+<br/>at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+<br/>at org.testng.TestRunner.privateRun(TestRunner.java:767)
+<br/>at org.testng.TestRunner.run(TestRunner.java:617)
+<br/>at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+<br/>at org.testng.SuiteRunner.access$000(SuiteRunner.java:37)
+<br/>at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:368)
+<br/>at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+<br/>at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+<br/>at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+<br/>at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+<br/>at java.lang.Thread.run(Thread.java:744)
+<br/>1 lines not shown
+<p>Caused by Unable to get browser (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20 milliseconds
+Build info: version: &apos;2.51.0&apos;, revision: &apos;1af067d&apos;, time: &apos;2016-02-05 19:15:17&apos;
+System info: host: &apos;HJ-AEPAEP1637&apos;, ip: &apos;10.51.231.3&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+Session ID: 9c9620de-a2cd-470f-8133-67fbcf00aa4a
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{platform=WINDOWS, javascriptEnabled=true, elementScrollBehavior=0, ignoreZoomSetting=false, enablePersistentHover=true, ie.ensureCleanSession=false, browserName=internet explorer, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss, version=11, pageLoadStrategy=normal, ie.usePerProcessProxy=false, cssSelectorsEnabled=true, ignoreProtectedModeSettings=true, requireWindowFocus=false, initialBrowserUrl=http://localhost:19065/, handlesAlerts=true, ie.forceCreateProcessApi=false, nativeEvents=true, browserAttachTimeout=0, ie.browserCommandLineSwitches=, takesScreenshot=true}]
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
+System info: host: &apos;HJ-AEPAEP1637&apos;, ip: &apos;10.51.231.3&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+Driver info: driver.version: InternetExplorerDriver</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:701)
+<br/>at org.openqa.selenium.ie.InternetExplorerDriver.getScreenshotAs(InternetExplorerDriver.java:194)
+<br/>at org.openqa.selenium.remote.server.handler.CaptureScreenshot.call(CaptureScreenshot.java:36)
+<br/>at org.openqa.selenium.remote.server.handler.CaptureScreenshot.call(CaptureScreenshot.java:1)
+<br/>at java.util.concurrent.FutureTask.run(Unknown Source)
+<br/>at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+<br/>at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+<br/>at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+<br/>at java.lang.Thread.run(Unknown Source)
+<br/>1 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">com.main.testcases.Workflow1:testLoginSuccess</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>admin</td>
+<td>Siteadmin@123</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="2">
+<p>Unable to find element with id == user_login (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.36 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.51.0&apos;, revision: &apos;1af067d&apos;, time: &apos;2016-02-05 19:15:17&apos;
+System info: host: &apos;HJ-AEPAEP1637&apos;, ip: &apos;10.51.231.3&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+*** Element info: {Using=id, value=user_login}
+Session ID: 9c9620de-a2cd-470f-8133-67fbcf00aa4a
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{platform=WINDOWS, javascriptEnabled=true, elementScrollBehavior=0, ignoreZoomSetting=false, enablePersistentHover=true, ie.ensureCleanSession=false, browserName=internet explorer, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss, version=11, pageLoadStrategy=normal, ie.usePerProcessProxy=false, cssSelectorsEnabled=true, ignoreProtectedModeSettings=true, requireWindowFocus=false, initialBrowserUrl=http://localhost:19065/, handlesAlerts=true, ie.forceCreateProcessApi=false, nativeEvents=true, browserAttachTimeout=0, ie.browserCommandLineSwitches=, takesScreenshot=true}]
+Command duration or timeout: 61.80 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
+System info: host: &apos;HJ-AEPAEP1637&apos;, ip: &apos;10.51.231.3&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+*** Element info: {Using=id, value=user_login}
+Session ID: 7e490c81-70d3-4a08-8278-254e8ff70307
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{platform=WINDOWS, javascriptEnabled=true, elementScrollBehavior=0, ignoreZoomSetting=false, enablePersistentHover=true, ie.ensureCleanSession=false, browserName=internet explorer, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss, webdriver.remote.sessionid=7e490c81-70d3-4a08-8278-254e8ff70307, version=11, pageLoadStrategy=normal, ie.usePerProcessProxy=false, cssSelectorsEnabled=true, ignoreProtectedModeSettings=true, requireWindowFocus=false, initialBrowserUrl=http://localhost:19065/, handlesAlerts=true, ie.forceCreateProcessApi=false, nativeEvents=true, browserAttachTimeout=0, ie.browserCommandLineSwitches=, takesScreenshot=true}]</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+<br/>at org.openqa.selenium.By$ById.findElement(By.java:218)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+<br/>at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+<br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+<br/>at com.sun.proxy.$Proxy10.clear(Unknown Source)
+<br/>at com.main.pof.LoginPage.loginAction(LoginPage.java:27)
+<br/>at com.main.testcases.Workflow1.testLoginSuccess(Workflow1.java:40)
+<br/>21 lines not shown
+<p>Caused by Screen shot has been taken
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
+System info: host: &apos;HJ-AEPAEP1637&apos;, ip: &apos;10.51.231.3&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+Driver info: driver.version: RemoteWebDriver</p>
+org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:138)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+<br/>at org.openqa.selenium.By$ById.findElement(By.java:218)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+<br/>at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+<br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+<br/>at com.sun.proxy.$Proxy10.clear(Unknown Source)
+<br/>at com.main.pof.LoginPage.loginAction(LoginPage.java:27)
+<br/>at com.main.testcases.Workflow1.testLoginSuccess(Workflow1.java:40)
+<br/>21 lines not shown
+<p>Caused by Unable to find element with id == user_login (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.36 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.51.0&apos;, revision: &apos;1af067d&apos;, time: &apos;2016-02-05 19:15:17&apos;
+System info: host: &apos;HJ-AEPAEP1637&apos;, ip: &apos;10.51.231.3&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+*** Element info: {Using=id, value=user_login}
+Session ID: 9c9620de-a2cd-470f-8133-67fbcf00aa4a
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{platform=WINDOWS, javascriptEnabled=true, elementScrollBehavior=0, ignoreZoomSetting=false, enablePersistentHover=true, ie.ensureCleanSession=false, browserName=internet explorer, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss, version=11, pageLoadStrategy=normal, ie.usePerProcessProxy=false, cssSelectorsEnabled=true, ignoreProtectedModeSettings=true, requireWindowFocus=false, initialBrowserUrl=http://localhost:19065/, handlesAlerts=true, ie.forceCreateProcessApi=false, nativeEvents=true, browserAttachTimeout=0, ie.browserCommandLineSwitches=, takesScreenshot=true}]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
+System info: host: &apos;HJ-AEPAEP1637&apos;, ip: &apos;10.51.231.3&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+Driver info: driver.version: EventFiringWebDriver</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+<br/>at org.openqa.selenium.By$ById.findElement(By.java:218)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+<br/>at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br/>at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+<br/>at com.sun.proxy.$Proxy1.findElement(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:188)
+<br/>at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:48)
+<br/>at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:1)
+<br/>at java.util.concurrent.FutureTask.run(Unknown Source)
+<br/>at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+<br/>at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+<br/>at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+<br/>at java.lang.Thread.run(Unknown Source)
+<br/>1 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">com.main.testcases.Workflow1:login</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>admin</td>
+<td>Siteadmin@123</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="2">
+<p>Unable to find element with id == user_login (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.33 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.51.0&apos;, revision: &apos;1af067d&apos;, time: &apos;2016-02-05 19:15:17&apos;
+System info: host: &apos;HJ-AEPAEP1637&apos;, ip: &apos;10.51.231.3&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+*** Element info: {Using=id, value=user_login}
+Session ID: 9c9620de-a2cd-470f-8133-67fbcf00aa4a
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{platform=WINDOWS, javascriptEnabled=true, elementScrollBehavior=0, ignoreZoomSetting=false, enablePersistentHover=true, ie.ensureCleanSession=false, browserName=internet explorer, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss, version=11, pageLoadStrategy=normal, ie.usePerProcessProxy=false, cssSelectorsEnabled=true, ignoreProtectedModeSettings=true, requireWindowFocus=false, initialBrowserUrl=http://localhost:19065/, handlesAlerts=true, ie.forceCreateProcessApi=false, nativeEvents=true, browserAttachTimeout=0, ie.browserCommandLineSwitches=, takesScreenshot=true}]
+Command duration or timeout: 60.75 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
+System info: host: &apos;HJ-AEPAEP1637&apos;, ip: &apos;10.51.231.3&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+*** Element info: {Using=id, value=user_login}
+Session ID: 7e490c81-70d3-4a08-8278-254e8ff70307
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{platform=WINDOWS, javascriptEnabled=true, elementScrollBehavior=0, ignoreZoomSetting=false, enablePersistentHover=true, ie.ensureCleanSession=false, browserName=internet explorer, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss, webdriver.remote.sessionid=7e490c81-70d3-4a08-8278-254e8ff70307, version=11, pageLoadStrategy=normal, ie.usePerProcessProxy=false, cssSelectorsEnabled=true, ignoreProtectedModeSettings=true, requireWindowFocus=false, initialBrowserUrl=http://localhost:19065/, handlesAlerts=true, ie.forceCreateProcessApi=false, nativeEvents=true, browserAttachTimeout=0, ie.browserCommandLineSwitches=, takesScreenshot=true}]</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+<br/>at org.openqa.selenium.By$ById.findElement(By.java:218)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+<br/>at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+<br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+<br/>at com.sun.proxy.$Proxy10.clear(Unknown Source)
+<br/>at com.main.pof.LoginPage.loginAction(LoginPage.java:27)
+<br/>at com.main.testcases.Workflow1.login(Workflow1.java:56)
+<br/>21 lines not shown
+<p>Caused by Screen shot has been taken
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
+System info: host: &apos;HJ-AEPAEP1637&apos;, ip: &apos;10.51.231.3&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+Driver info: driver.version: RemoteWebDriver</p>
+org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:138)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+<br/>at org.openqa.selenium.By$ById.findElement(By.java:218)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+<br/>at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+<br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+<br/>at com.sun.proxy.$Proxy10.clear(Unknown Source)
+<br/>at com.main.pof.LoginPage.loginAction(LoginPage.java:27)
+<br/>at com.main.testcases.Workflow1.login(Workflow1.java:56)
+<br/>21 lines not shown
+<p>Caused by Unable to find element with id == user_login (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.33 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.51.0&apos;, revision: &apos;1af067d&apos;, time: &apos;2016-02-05 19:15:17&apos;
+System info: host: &apos;HJ-AEPAEP1637&apos;, ip: &apos;10.51.231.3&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+*** Element info: {Using=id, value=user_login}
+Session ID: 9c9620de-a2cd-470f-8133-67fbcf00aa4a
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{platform=WINDOWS, javascriptEnabled=true, elementScrollBehavior=0, ignoreZoomSetting=false, enablePersistentHover=true, ie.ensureCleanSession=false, browserName=internet explorer, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss, version=11, pageLoadStrategy=normal, ie.usePerProcessProxy=false, cssSelectorsEnabled=true, ignoreProtectedModeSettings=true, requireWindowFocus=false, initialBrowserUrl=http://localhost:19065/, handlesAlerts=true, ie.forceCreateProcessApi=false, nativeEvents=true, browserAttachTimeout=0, ie.browserCommandLineSwitches=, takesScreenshot=true}]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
+System info: host: &apos;HJ-AEPAEP1637&apos;, ip: &apos;10.51.231.3&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+Driver info: driver.version: EventFiringWebDriver</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+<br/>at org.openqa.selenium.By$ById.findElement(By.java:218)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+<br/>at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br/>at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+<br/>at com.sun.proxy.$Proxy1.findElement(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:188)
+<br/>at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:48)
+<br/>at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:1)
+<br/>at java.util.concurrent.FutureTask.run(Unknown Source)
+<br/>at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+<br/>at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+<br/>at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+<br/>at java.lang.Thread.run(Unknown Source)
+<br/>1 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">com.main.testcases.Workflow2:takeScreenShotOnFailure</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">com.main.testcases.Workflow1:takeScreenShotOnFailure</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">com.main.testcases.Workflow2:takeScreenShotOnFailure</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">com.main.testcases.Workflow2:takeScreenShotOnFailure</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">com.main.testcases.Workflow2:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m9">com.main.testcases.Workflow2:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">com.main.testcases.Workflow2:takeScreenShotOnFailure</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m11">com.main.testcases.Workflow1:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m12">com.main.testcases.Workflow1:takeScreenShotOnFailure</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m13">com.main.testcases.Workflow1:takeScreenShotOnFailure</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m14">com.main.testcases.Workflow1:takeScreenShotOnFailure</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m15">com.main.testcases.Workflow2:verifyLinksOnPage</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>Firstpost</td>
+<td>Secondpost</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m16">com.main.testcases.Workflow1:addSearchDeletePost</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m17">com.main.testcases.Workflow2:searchPost</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m18">com.main.testcases.Workflow2:verifyHomePage</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m19">com.main.testcases.Workflow1:createNewPost</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
+<tr class="param stripe"><td>Firstpost</td>
+<td>admin</td>
+<td>admin@123</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m20">com.main.testcases.Workflow2:postComment</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m21">com.main.testcases.Workflow1:createNewPost</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
+<tr class="param stripe"><td>Secondpost</td>
+<td>admin</td>
+<td>admin@123</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m22">com.main.testcases.Workflow1:searchPostOnUI</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>Test on Linux - Firefox</h1>
+<h2 id="m23">com.main.testcases.Workflow2:setup</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
+<tr class="param stripe"><td>firefox</td>
+<td>10.222.115.75</td>
+<td>8888</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="3">
+<p>Unable to connect to host 127.0.0.1 on port 7055 after 45000 ms. Firefox console output:
+
+Command duration or timeout: 45.28 seconds
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
+System info: host: &apos;HJ-AEPAEP1637&apos;, ip: &apos;10.51.231.3&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:249)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:158)
+<br/>at com.main.pof.GenericFunctions.setup(GenericFunctions.java:49)
+<br/>at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br/>at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br/>at java.lang.reflect.Method.invoke(Method.java:606)
+<br/>at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+<br/>at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+<br/>at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+<br/>at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+<br/>at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:175)
+<br/>at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:107)
+<br/>at org.testng.TestRunner.privateRun(TestRunner.java:767)
+<br/>at org.testng.TestRunner.run(TestRunner.java:617)
+<br/>at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+<br/>at org.testng.SuiteRunner.access$000(SuiteRunner.java:37)
+<br/>at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:368)
+<br/>at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+<br/>at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+<br/>at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+<br/>at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+<br/>at java.lang.Thread.run(Thread.java:744)
+<br/>1 lines not shown
+<p>Caused by Unable to connect to host 127.0.0.1 on port 7055 after 45000 ms. Firefox console output:
+
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
+System info: host: &apos;HJ-AEPAEP1637&apos;, ip: &apos;10.51.231.3&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+Driver info: driver.version: FirefoxDriver</p>
+org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:112)
+<br/>at org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:271)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:119)
+<br/>at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:218)
+<br/>at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:211)
+<br/>at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:129)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+<br/>at org.openqa.selenium.remote.server.FirefoxDriverProvider.callConstructor(FirefoxDriverProvider.java:91)
+<br/>at org.openqa.selenium.remote.server.FirefoxDriverProvider.newInstance(FirefoxDriverProvider.java:68)
+<br/>at org.openqa.selenium.remote.server.DefaultDriverFactory.newInstance(DefaultDriverFactory.java:60)
+<br/>at org.openqa.selenium.remote.server.DefaultSession$BrowserCreator.call(DefaultSession.java:222)
+<br/>at org.openqa.selenium.remote.server.DefaultSession$BrowserCreator.call(DefaultSession.java:1)
+<br/>at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+<br/>at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+<br/>at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+<br/>at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+<br/>at java.lang.Thread.run(Thread.java:745)
+<br/>1 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m24">com.main.testcases.Workflow1:createNewPost</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
+<tr class="param stripe"><td>Firstpost</td>
+<td>admin</td>
+<td>admin@123</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="3">
+<p>Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Posts&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.51.0&apos;, revision: &apos;1af067d&apos;, time: &apos;2016-02-05 19:15:17&apos;
+System info: host: &apos;N/A&apos;, ip: &apos;N/A&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;2.6.32-573.el6.x86_64&apos;, java.version: &apos;1.7.0_79&apos;
+Driver info: driver.version: unknown
+Command duration or timeout: 31.81 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
+System info: host: &apos;HJ-AEPAEP1637&apos;, ip: &apos;10.51.231.3&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+*** Element info: {Using=link text, value=Posts}
+Session ID: 58c37af7-0970-4dba-b91e-67a5e5bee09f
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{platform=LINUX, javascriptEnabled=true, acceptSslCerts=true, browserName=firefox, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=58c37af7-0970-4dba-b91e-67a5e5bee09f, version=38.0.1, databaseEnabled=true, cssSelectorsEnabled=true, handlesAlerts=true, webStorageEnabled=true, nativeEvents=false, applicationCacheEnabled=true, takesScreenshot=true}]</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:428)
+<br/>at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+<br/>at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+<br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+<br/>at com.sun.proxy.$Proxy10.getCoordinates(Unknown Source)
+<br/>at org.openqa.selenium.interactions.internal.MouseAction.getActionLocation(MouseAction.java:51)
+<br/>at org.openqa.selenium.interactions.MoveMouseAction.perform(MoveMouseAction.java:39)
+<br/>at org.openqa.selenium.interactions.CompositeAction.perform(CompositeAction.java:50)
+<br/>at com.main.pof.CreatePostPage.loadCreatePostPage(CreatePostPage.java:46)
+<br/>at com.main.testcases.Workflow1.createNewPost(Workflow1.java:63)
+<br/>21 lines not shown
+<p>Caused by Screen shot has been taken
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
+System info: host: &apos;HJ-AEPAEP1637&apos;, ip: &apos;10.51.231.3&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+Driver info: driver.version: RemoteWebDriver</p>
+org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:138)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:428)
+<br/>at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+<br/>at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+<br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+<br/>at com.sun.proxy.$Proxy10.getCoordinates(Unknown Source)
+<br/>at org.openqa.selenium.interactions.internal.MouseAction.getActionLocation(MouseAction.java:51)
+<br/>at org.openqa.selenium.interactions.MoveMouseAction.perform(MoveMouseAction.java:39)
+<br/>at org.openqa.selenium.interactions.CompositeAction.perform(CompositeAction.java:50)
+<br/>at com.main.pof.CreatePostPage.loadCreatePostPage(CreatePostPage.java:46)
+<br/>at com.main.testcases.Workflow1.createNewPost(Workflow1.java:63)
+<br/>21 lines not shown
+<p>Caused by Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Posts&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.51.0&apos;, revision: &apos;1af067d&apos;, time: &apos;2016-02-05 19:15:17&apos;
+System info: host: &apos;N/A&apos;, ip: &apos;N/A&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;2.6.32-573.el6.x86_64&apos;, java.version: &apos;1.7.0_79&apos;
+Driver info: driver.version: unknown
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
+System info: host: &apos;HJ-AEPAEP1637&apos;, ip: &apos;10.51.231.3&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+Driver info: driver.version: unknown</p>
+&lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///tmp/anonymous2383006670495297886webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10723)
+<br/>at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///tmp/anonymous2383006670495297886webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:623)
+<br/>1 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m25">com.main.testcases.Workflow1:login</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>admin</td>
+<td>Siteadmin@123</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="2">
+<p>Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Log in&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.51.0&apos;, revision: &apos;1af067d&apos;, time: &apos;2016-02-05 19:15:17&apos;
+System info: host: &apos;N/A&apos;, ip: &apos;N/A&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;2.6.32-573.el6.x86_64&apos;, java.version: &apos;1.7.0_79&apos;
+Driver info: driver.version: unknown
+Command duration or timeout: 61.85 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
+System info: host: &apos;HJ-AEPAEP1637&apos;, ip: &apos;10.51.231.3&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+*** Element info: {Using=link text, value=Log in}
+Session ID: 58c37af7-0970-4dba-b91e-67a5e5bee09f
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{platform=LINUX, javascriptEnabled=true, acceptSslCerts=true, browserName=firefox, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=58c37af7-0970-4dba-b91e-67a5e5bee09f, version=38.0.1, databaseEnabled=true, cssSelectorsEnabled=true, handlesAlerts=true, webStorageEnabled=true, nativeEvents=false, applicationCacheEnabled=true, takesScreenshot=true}]</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:428)
+<br/>at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+<br/>at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+<br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+<br/>at com.sun.proxy.$Proxy10.getWrappedElement(Unknown Source)
+<br/>at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:49)
+<br/>at com.google.common.collect.Iterators$8.transform(Iterators.java:817)
+<br/>at com.google.common.collect.TransformedIterator.next(TransformedIterator.java:48)
+<br/>at com.google.common.collect.Iterators.addAll(Iterators.java:365)
+<br/>at com.google.common.collect.Lists.newArrayList(Lists.java:162)
+<br/>at com.google.common.collect.Lists.newArrayList(Lists.java:146)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:572)
+<br/>at com.main.pof.BlogHomePage.clickLoginInLink(BlogHomePage.java:63)
+<br/>at com.main.testcases.Workflow1.login(Workflow1.java:55)
+<br/>21 lines not shown
+<p>Caused by Screen shot has been taken
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
+System info: host: &apos;HJ-AEPAEP1637&apos;, ip: &apos;10.51.231.3&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+Driver info: driver.version: RemoteWebDriver</p>
+org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:138)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:428)
+<br/>at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+<br/>at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+<br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+<br/>at com.sun.proxy.$Proxy10.getWrappedElement(Unknown Source)
+<br/>at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:49)
+<br/>at com.google.common.collect.Iterators$8.transform(Iterators.java:817)
+<br/>at com.google.common.collect.TransformedIterator.next(TransformedIterator.java:48)
+<br/>at com.google.common.collect.Iterators.addAll(Iterators.java:365)
+<br/>at com.google.common.collect.Lists.newArrayList(Lists.java:162)
+<br/>at com.google.common.collect.Lists.newArrayList(Lists.java:146)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:572)
+<br/>at com.main.pof.BlogHomePage.clickLoginInLink(BlogHomePage.java:63)
+<br/>at com.main.testcases.Workflow1.login(Workflow1.java:55)
+<br/>21 lines not shown
+<p>Caused by Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Log in&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.51.0&apos;, revision: &apos;1af067d&apos;, time: &apos;2016-02-05 19:15:17&apos;
+System info: host: &apos;N/A&apos;, ip: &apos;N/A&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;2.6.32-573.el6.x86_64&apos;, java.version: &apos;1.7.0_79&apos;
+Driver info: driver.version: unknown
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
+System info: host: &apos;HJ-AEPAEP1637&apos;, ip: &apos;10.51.231.3&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+Driver info: driver.version: unknown</p>
+&lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///tmp/anonymous2383006670495297886webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10723)
+<br/>at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///tmp/anonymous2383006670495297886webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:623)
+<br/>1 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m26">com.main.testcases.Workflow1:addSearchDeletePost</h2>
+<div style="padding-left:3em">
+<p>Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Posts&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.51.0&apos;, revision: &apos;1af067d&apos;, time: &apos;2016-02-05 19:15:17&apos;
+System info: host: &apos;N/A&apos;, ip: &apos;N/A&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;2.6.32-573.el6.x86_64&apos;, java.version: &apos;1.7.0_79&apos;
+Driver info: driver.version: unknown
+Command duration or timeout: 32.01 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
+System info: host: &apos;HJ-AEPAEP1637&apos;, ip: &apos;10.51.231.3&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+*** Element info: {Using=link text, value=Posts}
+Session ID: 58c37af7-0970-4dba-b91e-67a5e5bee09f
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{platform=LINUX, javascriptEnabled=true, acceptSslCerts=true, browserName=firefox, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=58c37af7-0970-4dba-b91e-67a5e5bee09f, version=38.0.1, databaseEnabled=true, cssSelectorsEnabled=true, handlesAlerts=true, webStorageEnabled=true, nativeEvents=false, applicationCacheEnabled=true, takesScreenshot=true}]</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:428)
+<br/>at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+<br/>at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+<br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+<br/>at com.sun.proxy.$Proxy10.getCoordinates(Unknown Source)
+<br/>at org.openqa.selenium.interactions.internal.MouseAction.getActionLocation(MouseAction.java:51)
+<br/>at org.openqa.selenium.interactions.MoveMouseAction.perform(MoveMouseAction.java:39)
+<br/>at org.openqa.selenium.interactions.CompositeAction.perform(CompositeAction.java:50)
+<br/>at com.main.pof.CreatePostPage.loadCreatePostPage(CreatePostPage.java:46)
+<br/>at com.main.testcases.Workflow1.addSearchDeletePost(Workflow1.java:88)
+<br/>21 lines not shown
+<p>Caused by Screen shot has been taken
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
+System info: host: &apos;HJ-AEPAEP1637&apos;, ip: &apos;10.51.231.3&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+Driver info: driver.version: RemoteWebDriver</p>
+org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:138)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:428)
+<br/>at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+<br/>at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+<br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+<br/>at com.sun.proxy.$Proxy10.getCoordinates(Unknown Source)
+<br/>at org.openqa.selenium.interactions.internal.MouseAction.getActionLocation(MouseAction.java:51)
+<br/>at org.openqa.selenium.interactions.MoveMouseAction.perform(MoveMouseAction.java:39)
+<br/>at org.openqa.selenium.interactions.CompositeAction.perform(CompositeAction.java:50)
+<br/>at com.main.pof.CreatePostPage.loadCreatePostPage(CreatePostPage.java:46)
+<br/>at com.main.testcases.Workflow1.addSearchDeletePost(Workflow1.java:88)
+<br/>21 lines not shown
+<p>Caused by Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Posts&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.51.0&apos;, revision: &apos;1af067d&apos;, time: &apos;2016-02-05 19:15:17&apos;
+System info: host: &apos;N/A&apos;, ip: &apos;N/A&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;2.6.32-573.el6.x86_64&apos;, java.version: &apos;1.7.0_79&apos;
+Driver info: driver.version: unknown
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
+System info: host: &apos;HJ-AEPAEP1637&apos;, ip: &apos;10.51.231.3&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+Driver info: driver.version: unknown</p>
+&lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///tmp/anonymous2383006670495297886webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10723)
+<br/>at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///tmp/anonymous2383006670495297886webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:623)
+<br/>1 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m27">com.main.testcases.Workflow1:createNewPost</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
+<tr class="param stripe"><td>Secondpost</td>
+<td>admin</td>
+<td>admin@123</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="3">
+<p>Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Posts&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.51.0&apos;, revision: &apos;1af067d&apos;, time: &apos;2016-02-05 19:15:17&apos;
+System info: host: &apos;N/A&apos;, ip: &apos;N/A&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;2.6.32-573.el6.x86_64&apos;, java.version: &apos;1.7.0_79&apos;
+Driver info: driver.version: unknown
+Command duration or timeout: 32.04 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
+System info: host: &apos;HJ-AEPAEP1637&apos;, ip: &apos;10.51.231.3&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+*** Element info: {Using=link text, value=Posts}
+Session ID: 58c37af7-0970-4dba-b91e-67a5e5bee09f
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{platform=LINUX, javascriptEnabled=true, acceptSslCerts=true, browserName=firefox, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=58c37af7-0970-4dba-b91e-67a5e5bee09f, version=38.0.1, databaseEnabled=true, cssSelectorsEnabled=true, handlesAlerts=true, webStorageEnabled=true, nativeEvents=false, applicationCacheEnabled=true, takesScreenshot=true}]</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:428)
+<br/>at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+<br/>at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+<br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+<br/>at com.sun.proxy.$Proxy10.getCoordinates(Unknown Source)
+<br/>at org.openqa.selenium.interactions.internal.MouseAction.getActionLocation(MouseAction.java:51)
+<br/>at org.openqa.selenium.interactions.MoveMouseAction.perform(MoveMouseAction.java:39)
+<br/>at org.openqa.selenium.interactions.CompositeAction.perform(CompositeAction.java:50)
+<br/>at com.main.pof.CreatePostPage.loadCreatePostPage(CreatePostPage.java:46)
+<br/>at com.main.testcases.Workflow1.createNewPost(Workflow1.java:63)
+<br/>21 lines not shown
+<p>Caused by Screen shot has been taken
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
+System info: host: &apos;HJ-AEPAEP1637&apos;, ip: &apos;10.51.231.3&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+Driver info: driver.version: RemoteWebDriver</p>
+org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:138)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:428)
+<br/>at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+<br/>at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+<br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+<br/>at com.sun.proxy.$Proxy10.getCoordinates(Unknown Source)
+<br/>at org.openqa.selenium.interactions.internal.MouseAction.getActionLocation(MouseAction.java:51)
+<br/>at org.openqa.selenium.interactions.MoveMouseAction.perform(MoveMouseAction.java:39)
+<br/>at org.openqa.selenium.interactions.CompositeAction.perform(CompositeAction.java:50)
+<br/>at com.main.pof.CreatePostPage.loadCreatePostPage(CreatePostPage.java:46)
+<br/>at com.main.testcases.Workflow1.createNewPost(Workflow1.java:63)
+<br/>21 lines not shown
+<p>Caused by Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Posts&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.51.0&apos;, revision: &apos;1af067d&apos;, time: &apos;2016-02-05 19:15:17&apos;
+System info: host: &apos;N/A&apos;, ip: &apos;N/A&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;2.6.32-573.el6.x86_64&apos;, java.version: &apos;1.7.0_79&apos;
+Driver info: driver.version: unknown
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
+System info: host: &apos;HJ-AEPAEP1637&apos;, ip: &apos;10.51.231.3&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+Driver info: driver.version: unknown</p>
+&lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///tmp/anonymous2383006670495297886webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10723)
+<br/>at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///tmp/anonymous2383006670495297886webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:623)
+<br/>1 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m28">com.main.testcases.Workflow1:searchPostOnUI</h2>
+<div style="padding-left:3em">
+<p>Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Posts&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.51.0&apos;, revision: &apos;1af067d&apos;, time: &apos;2016-02-05 19:15:17&apos;
+System info: host: &apos;N/A&apos;, ip: &apos;N/A&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;2.6.32-573.el6.x86_64&apos;, java.version: &apos;1.7.0_79&apos;
+Driver info: driver.version: unknown
+Command duration or timeout: 31.82 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
+System info: host: &apos;HJ-AEPAEP1637&apos;, ip: &apos;10.51.231.3&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+*** Element info: {Using=link text, value=Posts}
+Session ID: 58c37af7-0970-4dba-b91e-67a5e5bee09f
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{platform=LINUX, javascriptEnabled=true, acceptSslCerts=true, browserName=firefox, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=58c37af7-0970-4dba-b91e-67a5e5bee09f, version=38.0.1, databaseEnabled=true, cssSelectorsEnabled=true, handlesAlerts=true, webStorageEnabled=true, nativeEvents=false, applicationCacheEnabled=true, takesScreenshot=true}]</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:428)
+<br/>at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+<br/>at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+<br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+<br/>at com.sun.proxy.$Proxy10.getCoordinates(Unknown Source)
+<br/>at org.openqa.selenium.interactions.internal.MouseAction.getActionLocation(MouseAction.java:51)
+<br/>at org.openqa.selenium.interactions.MoveMouseAction.perform(MoveMouseAction.java:39)
+<br/>at org.openqa.selenium.interactions.CompositeAction.perform(CompositeAction.java:50)
+<br/>at com.main.pof.AllPostsPage.loadAllPostsPage(AllPostsPage.java:41)
+<br/>at com.main.testcases.Workflow1.searchPostOnUI(Workflow1.java:77)
+<br/>21 lines not shown
+<p>Caused by Screen shot has been taken
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
+System info: host: &apos;HJ-AEPAEP1637&apos;, ip: &apos;10.51.231.3&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+Driver info: driver.version: RemoteWebDriver</p>
+org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:138)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:428)
+<br/>at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+<br/>at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+<br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+<br/>at com.sun.proxy.$Proxy10.getCoordinates(Unknown Source)
+<br/>at org.openqa.selenium.interactions.internal.MouseAction.getActionLocation(MouseAction.java:51)
+<br/>at org.openqa.selenium.interactions.MoveMouseAction.perform(MoveMouseAction.java:39)
+<br/>at org.openqa.selenium.interactions.CompositeAction.perform(CompositeAction.java:50)
+<br/>at com.main.pof.AllPostsPage.loadAllPostsPage(AllPostsPage.java:41)
+<br/>at com.main.testcases.Workflow1.searchPostOnUI(Workflow1.java:77)
+<br/>21 lines not shown
+<p>Caused by Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Posts&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.51.0&apos;, revision: &apos;1af067d&apos;, time: &apos;2016-02-05 19:15:17&apos;
+System info: host: &apos;N/A&apos;, ip: &apos;N/A&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;2.6.32-573.el6.x86_64&apos;, java.version: &apos;1.7.0_79&apos;
+Driver info: driver.version: unknown
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
+System info: host: &apos;HJ-AEPAEP1637&apos;, ip: &apos;10.51.231.3&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+Driver info: driver.version: unknown</p>
+&lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///tmp/anonymous2383006670495297886webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10723)
+<br/>at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///tmp/anonymous2383006670495297886webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:623)
+<br/>1 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m29">com.main.testcases.Workflow1:testLoginSuccess</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>admin</td>
+<td>Siteadmin@123</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="2">
+<p>Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Log Out&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.51.0&apos;, revision: &apos;1af067d&apos;, time: &apos;2016-02-05 19:15:17&apos;
+System info: host: &apos;N/A&apos;, ip: &apos;N/A&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;2.6.32-573.el6.x86_64&apos;, java.version: &apos;1.7.0_79&apos;
+Driver info: driver.version: unknown
+Command duration or timeout: 62.13 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
+System info: host: &apos;HJ-AEPAEP1637&apos;, ip: &apos;10.51.231.3&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+*** Element info: {Using=link text, value=Log Out}
+Session ID: 58c37af7-0970-4dba-b91e-67a5e5bee09f
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{platform=LINUX, javascriptEnabled=true, acceptSslCerts=true, browserName=firefox, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=58c37af7-0970-4dba-b91e-67a5e5bee09f, version=38.0.1, databaseEnabled=true, cssSelectorsEnabled=true, handlesAlerts=true, webStorageEnabled=true, nativeEvents=false, applicationCacheEnabled=true, takesScreenshot=true}]</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:428)
+<br/>at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+<br/>at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+<br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+<br/>at com.sun.proxy.$Proxy10.click(Unknown Source)
+<br/>at com.main.pof.DashboardPage.signOut(DashboardPage.java:40)
+<br/>at com.main.testcases.Workflow1.testLoginSuccess(Workflow1.java:43)
+<br/>21 lines not shown
+<p>Caused by Screen shot has been taken
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
+System info: host: &apos;HJ-AEPAEP1637&apos;, ip: &apos;10.51.231.3&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+Driver info: driver.version: RemoteWebDriver</p>
+org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:138)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:428)
+<br/>at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+<br/>at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+<br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+<br/>at com.sun.proxy.$Proxy10.click(Unknown Source)
+<br/>at com.main.pof.DashboardPage.signOut(DashboardPage.java:40)
+<br/>at com.main.testcases.Workflow1.testLoginSuccess(Workflow1.java:43)
+<br/>21 lines not shown
+<p>Caused by Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Log Out&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.51.0&apos;, revision: &apos;1af067d&apos;, time: &apos;2016-02-05 19:15:17&apos;
+System info: host: &apos;N/A&apos;, ip: &apos;N/A&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;2.6.32-573.el6.x86_64&apos;, java.version: &apos;1.7.0_79&apos;
+Driver info: driver.version: unknown
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
+System info: host: &apos;HJ-AEPAEP1637&apos;, ip: &apos;10.51.231.3&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+Driver info: driver.version: unknown</p>
+&lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///tmp/anonymous2383006670495297886webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10723)
+<br/>at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///tmp/anonymous2383006670495297886webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:623)
+<br/>1 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m30">com.main.testcases.Workflow2:takeScreenShotOnFailure</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m31">com.main.testcases.Workflow2:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m32">com.main.testcases.Workflow2:takeScreenShotOnFailure</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m33">com.main.testcases.Workflow2:takeScreenShotOnFailure</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m34">com.main.testcases.Workflow2:takeScreenShotOnFailure</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m35">com.main.testcases.Workflow2:verifyLinksOnPage</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>Firstpost</td>
+<td>Secondpost</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m36">com.main.testcases.Workflow2:searchPost</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m37">com.main.testcases.Workflow2:verifyHomePage</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m38">com.main.testcases.Workflow2:postComment</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>Test on Windows 7 - chrome</h1>
+<h2 id="m39">com.main.testcases.Workflow1:testLoginSuccess</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>admin</td>
+<td>Siteadmin@123</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="2">
+<p>expected [true] but found [false]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertTrue(Assert.java:42)
+<br/>at org.testng.Assert.assertTrue(Assert.java:52)
+<br/>at com.main.testcases.Workflow1.testLoginSuccess(Workflow1.java:48)
+<br/>21 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m40">com.main.testcases.Workflow2:searchPost</h2>
+<div style="padding-left:3em">
+<p>expected [true] but found [false]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertTrue(Assert.java:42)
+<br/>at org.testng.Assert.assertTrue(Assert.java:52)
+<br/>at com.main.testcases.Workflow2.searchPost(Workflow2.java:45)
+<br/>21 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m41">com.main.testcases.Workflow2:verifyHomePage</h2>
+<div style="padding-left:3em">
+Test verifyHomePage passed<br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m42">com.main.testcases.Workflow1:createNewPost</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
+<tr class="param stripe"><td>Firstpost</td>
+<td>admin</td>
+<td>admin@123</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="3">
+Post created successfully<br/>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m43">com.main.testcases.Workflow1:login</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>admin</td>
+<td>Siteadmin@123</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m44">com.main.testcases.Workflow1:addSearchDeletePost</h2>
+<div style="padding-left:3em">
+Search deleted post<br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m45">com.main.testcases.Workflow1:searchPostOnUI</h2>
+<div style="padding-left:3em">
+Searched for existing and non-existing post<br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m46">com.main.testcases.Workflow2:postComment</h2>
+<div style="padding-left:3em">
+Test postComment passed<br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m47">com.main.testcases.Workflow2:verifyLinksOnPage</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>Firstpost</td>
+<td>Secondpost</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="2">
+Test verifyLinksOnPage passed<br/>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m48">com.main.testcases.Workflow1:createNewPost</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
+<tr class="param stripe"><td>Secondpost</td>
+<td>admin</td>
+<td>admin@123</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="3">
+Post created successfully<br/>
+</td></tr>
+</table>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

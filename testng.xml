@@ -1,32 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite" parallel="tests" thread-count="5">
-  <test name="Test on chrome">
-    <parameter name="browser" value="firefox" />
-    <parameter name="ip" value="localhost" />
-    <parameter name="port" value="81" />  
+<suite name="Suite" parallel="tests" thread-count="3">
+    
+  <listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+ 
+  <!--  Paramters possible values
+		browser - firefox, chrome, "internet explorer"
+		ip - ip address of your node
+		port - port of your node listening on
+  -->
+  
+ <test name="Test on Windows 7 - chrome" preserve-order="true" >
+    <parameter name="browser" value="chrome" />
+    <parameter name="ip" value="10.51.230.251" />
+    <parameter name="port" value="6666" />  
     <classes>
       <class name="com.main.testcases.Workflow1"/>
+      <class name="com.main.testcases.Workflow2"/>
     </classes>
-  </test>
-  
-  <!-- 
-  <test name="Test on firefox">
+ </test>
+ <test name="Test on Linux - Firefox" preserve-order="true" >
     <parameter name="browser" value="firefox" />
-    <parameter name="ip" value="10.222.115.114" />
-    <parameter name="port" value="2222" />  
+    <parameter name="ip" value="10.222.115.75" />
+    <parameter name="port" value="8888" />  
     <classes>
-      <class name="com.main.testcases.TestLogin"/>
+      <class name="com.main.testcases.Workflow1"/>
+      <class name="com.main.testcases.Workflow2"/>
     </classes>
   </test>
-   -->
-<!--   <test name="Test on Internet Explorer">
+  <test name="Test on Windows 7 - Internet Explorer" preserve-order="true">
     <parameter name="browser" value="internet explorer" />
     <parameter name="ip" value="10.51.231.3" />
-    <parameter name="port" value="1111" />  
+    <parameter name="port" value="5555" />  
     <classes>
-      <class name="com.main.testcases.TestLogin"/>
+      <class name="com.main.testcases.Workflow1"/>
+      <class name="com.main.testcases.Workflow2"/>
     </classes>
-  </test> -->
-  
-</suite> 
+  </test>
+</suite>

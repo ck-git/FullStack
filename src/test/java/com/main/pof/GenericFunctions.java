@@ -40,11 +40,7 @@ public class GenericFunctions {
 	@BeforeClass
 	public void setup(String browser, String ip, String port) throws MalformedURLException{
 		
-		/*DesiredCapabilities capability = new DesiredCapabilities();
-		capability.setBrowserName(browser);			
-		driver = new RemoteWebDriver(new URL("http://".concat(ip).concat(":").concat(port).concat("/wd/hub")),capability);*/
 		
-		//CHANGE1
 		DesiredCapabilities capability;
 		
 		if (browser.equalsIgnoreCase("firefox")){
@@ -99,7 +95,7 @@ public class GenericFunctions {
            String pageTitle;
            pageTitle = driver.getTitle();
 
-           if(pageTitle.equals(titleToVerify))
+           if(pageTitle.contains(titleToVerify))
                   return true;
            else
                   return false;
