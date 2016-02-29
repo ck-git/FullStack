@@ -1,9 +1,6 @@
 package com.main.testcases;
 
-import java.util.concurrent.TimeUnit;
-
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import com.main.pof.AllPostsPage;
@@ -31,7 +28,8 @@ public class TestLogin extends GenericFunctions{
 	      return(retObjArr);
 	  }
 	 
-   @Test (dataProvider = "DP1", priority = 1)
+	 
+	@Test (dataProvider = "DP1", priority = 1)
 	public void testLoginSuccess(String username, String password){
     	
 		bloghomepage = bloghomepage.loadBlogHomePage();
@@ -44,43 +42,47 @@ public class TestLogin extends GenericFunctions{
     
     @Test(dataProvider = "DP2", priority = 2)
     public void createNewPost(String post_title){
-    	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     	bloghomepage = bloghomepage.loadBlogHomePage();
 	   	loginpage = bloghomepage.clickLoginInLink();
 		dashboardpage= loginpage.loginAction("admin","Siteadmin@123");
 		createpostpage = new CreatePostPage(driver);
 		createpostpage = createpostpage.loadCreatePostPage();
-		createpostpage.createPost(post_title);  	
+		createpostpage.createPost(post_title);		
 		dashboardpage.signOut();
    }
 	
     @Test(dataProvider = "DP1", priority = 3)
     public void searchPostOnUI(String username, String password){
+    	
     	bloghomepage = bloghomepage.loadBlogHomePage();
 		loginpage = bloghomepage.clickLoginInLink();
 		dashboardpage= loginpage.loginAction(username,password);
+		
     	allpostspage = new AllPostsPage(driver);
     	allpostspage = allpostspage.loadAllPostsPage();
-    	allpostspage.searchPost("Non-existing post");	
+    	Assert.assertFalse(allpostspage.searchPost("Non-existing post"));
+    	Assert.assertTrue(allpostspage.searchPost("post"));
     }
     
     @Test(priority = 4)
     public void addSearchDeletePost(){
   
-    /*	bloghomepage = bloghomepage.loadBlogHomePage();
+    	/*bloghomepage = bloghomepage.loadBlogHomePage();
 		loginpage = bloghomepage.clickLoginInLink();
 		dashboardpage= loginpage.loginAction("admin","Siteadmin@123");*/
 		
-    	createpostpage = new CreatePostPage(driver);
+		createpostpage = new CreatePostPage(driver);
       	createpostpage = createpostpage.loadCreatePostPage();
 		createpostpage.createPost("Post To be Deleted");
 		allpostspage = new AllPostsPage(driver);
     	allpostspage = allpostspage.loadAllPostsPage();
-    	allpostspage.searchPost("Post To be Deleted");
+    	allpostspage.searchPost("Post to be Deleted");
     	allpostspage.deletePost("Post To be Deleted");
+    	Assert.assertTrue(allpostspage.searchPost("Post to Deleted"));
+    	dashboardpage.signOut();
     }
     
-    @Test(priority = 5)
+/*    @Test(priority = 5)
     public void searchPostAfterDeletion(){
     	createpostpage = new CreatePostPage(driver);
       	createpostpage = createpostpage.loadCreatePostPage();
@@ -91,7 +93,7 @@ public class TestLogin extends GenericFunctions{
     	allpostspage.deletePost("Search postafter deletion");
     	allpostspage.searchPost("Search postafter deletion");
     	dashboardpage.signOut();
-    }
+    }*/
     
 /*    @AfterTest
     public void tearDown(){

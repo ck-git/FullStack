@@ -1,33 +1,29 @@
 package com.main.testcases;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.main.pof.BlogHomePage;
 import com.main.pof.GenericFunctions;
 
-public class Workflow2 {
+public class Workflow2 extends GenericFunctions{
 	
-	public WebDriver driver;
-	BlogHomePage bloghomepage;
+	//public WebDriver driver;
+	//BlogHomePage bloghomepage;
+
 	
-	
-	
-	@BeforeTest
-	public void launchBrowser(){
-		driver= new FirefoxDriver();
-		bloghomepage = new BlogHomePage(driver);
+	//@BeforeTest
+	public void startTestWorkflow2(){
+		//bloghomepage = new BlogHomePage(driver);
 		bloghomepage = bloghomepage.loadBlogHomePage();
-		driver.manage().window().maximize();
 	}
 	
 	@Test(priority=1)
 	public void verifyHomePage(){
 		
 		//Assert.assertTrue(GenericFunctions.VerifyPageTitle(driver, "My Blog – Just another WordPress site:"));
+		bloghomepage = bloghomepage.loadBlogHomePage();
 		Assert.assertTrue(GenericFunctions.VerifyPageHeading(bloghomepage.my_blog_link, "My Blog"));
 	}
 	
@@ -58,17 +54,12 @@ public class Workflow2 {
 	
 	
 	
-    @AfterTest
+/*    @AfterTest
 	    public void tearDown(){
 	    	driver.close();
 	    	driver.quit();
 	}
-    
-   
-	
-	
-	
-	
-	
+    */
+
 
 }
