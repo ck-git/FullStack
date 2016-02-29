@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="5">
+  <test name="Test on chrome">
+    <parameter name="browser" value="firefox" />
+    <parameter name="ip" value="localhost" />
+    <parameter name="port" value="81" />  
+    <classes>
+      <class name="com.main.testcases.Workflow1"/>
+    </classes>
+  </test>
+  
+  <!-- 
+  <test name="Test on firefox">
+    <parameter name="browser" value="firefox" />
+    <parameter name="ip" value="10.222.115.114" />
+    <parameter name="port" value="2222" />  
+    <classes>
+      <class name="com.main.testcases.TestLogin"/>
+    </classes>
+  </test>
+   -->
+<!--   <test name="Test on Internet Explorer">
+    <parameter name="browser" value="internet explorer" />
+    <parameter name="ip" value="10.51.231.3" />
+    <parameter name="port" value="1111" />  
+    <classes>
+      <class name="com.main.testcases.TestLogin"/>
+    </classes>
+  </test> -->
+  
+</suite> 

@@ -46,6 +46,7 @@ public class BlogHomePage {
 		this.driver = driver;
 	}
 	
+	
 	public BlogHomePage loadBlogHomePage(){
 		//driver.get("http://localhost:81/wordpress/");
 		driver.get("http://10.51.231.3/wordpress/");
