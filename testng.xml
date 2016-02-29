@@ -13,28 +13,28 @@
 		port - port of your node listening on
   -->
   
- <test name="Test on chrome">
+ <test name="Test on Windows 7 - chrome">
     <parameter name="browser" value="chrome" />
-    <parameter name="ip" value="10.222.115.114" />
-    <parameter name="port" value="3333" />  
+    <parameter name="ip" value="10.51.230.251" />
+    <parameter name="port" value="6666" />  
     <classes>
       <class name="com.main.testcases.TestLogin"/>
       <class name="com.main.testcases.Workflow2"/>
     </classes>
  </test>
- <test name="Test on firefox">
+ <test name="Test on Linux - Firefox">
     <parameter name="browser" value="firefox" />
-    <parameter name="ip" value="10.222.115.114" />
-    <parameter name="port" value="2222" />  
+    <parameter name="ip" value="10.222.115.75" />
+    <parameter name="port" value="8888" />  
     <classes>
       <class name="com.main.testcases.TestLogin"/>
       <class name="com.main.testcases.Workflow2"/>
     </classes>
   </test>
-  <test name="Test on Internet Explorer">
+  <test name="Test on Windows 7 - Internet Explorer">
     <parameter name="browser" value="internet explorer" />
-    <parameter name="ip" value="10.222.115.114" />
-    <parameter name="port" value="1111" />  
+    <parameter name="ip" value="10.51.231.3" />
+    <parameter name="port" value="5555" />  
     <classes>
       <class name="com.main.testcases.TestLogin"/>
       <class name="com.main.testcases.Workflow2"/>
