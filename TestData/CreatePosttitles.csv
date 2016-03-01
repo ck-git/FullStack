@@ -1,2 +1,3 @@
-title
-Firstpost
+title,dbusername,dbpassword
+Firstpost,admin,admin@123
+Secondpost,admin,admin@123

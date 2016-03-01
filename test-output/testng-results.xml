@@ -1,43 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="2" passed="1">
+<testng-results skipped="4" failed="0" total="4" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="168913" started-at="2016-02-24T16:50:09Z" finished-at="2016-02-24T16:52:58Z">
+  <suite name="Suite" duration-ms="805" started-at="2016-02-29T14:20:16Z" finished-at="2016-02-29T14:20:17Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="168913" started-at="2016-02-24T16:50:09Z" finished-at="2016-02-24T16:52:58Z">
-      <class name="com.main.testcases.TestLogin">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.main.testcases.TestLogin@194a1b5]" name="launchBrowser" is-config="true" duration-ms="8859" started-at="2016-02-24T22:20:09Z" finished-at="2016-02-24T22:20:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="addSearchDeletePost()[pri:0, instance:com.main.testcases.TestLogin@194a1b5]" name="addSearchDeletePost" duration-ms="95630" started-at="2016-02-24T22:20:18Z" finished-at="2016-02-24T22:21:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addSearchDeletePost -->
-        <test-method status="FAIL" signature="searchPostAfterDeletion()[pri:0, instance:com.main.testcases.TestLogin@194a1b5]" name="searchPostAfterDeletion" duration-ms="34029" started-at="2016-02-24T22:21:53Z" finished-at="2016-02-24T22:22:27Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+    <test name="Test on chrome" duration-ms="805" started-at="2016-02-29T14:20:16Z" finished-at="2016-02-29T14:20:17Z">
+      <class name="com.main.testcases.Workflow1">
+        <test-method status="FAIL" signature="setup(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.main.testcases.Workflow1@f438e]" name="setup" is-config="true" duration-ms="0" started-at="2016-02-29T19:50:16Z" finished-at="2016-02-29T19:50:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[localhost]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[81]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.UnsupportedCommandException">
             <message>
-              <![CDATA[Unable to locate element: {"method":"link text","selector":"Log in"}
-Command duration or timeout: 30.16 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+              <![CDATA[<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>404 Not Found</title>
+</head><body>
+<h1>Not Found</h1>
+<p>The requested URL /wd/hub/session was not found on this server.</p>
+</body></html>
+Command duration or timeout: 272 milliseconds
 Build info: version: '2.52.0', revision: '4c2593cfc3689a7fcd7be52549167e5ccc93ad28', time: '2016-02-11 11:22:43'
 System info: host: 'PSNGI3228', ip: '10.222.35.190', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_31'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=43.0.4, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 1ffae689-c450-45d4-8df7-c45206a32d38
-*** Element info: {Using=link text, value=Log in}]]>
+Driver info: org.openqa.selenium.remote.RemoteWebDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"link text","selector":"Log in"}
-Command duration or timeout: 30.16 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+              <![CDATA[org.openqa.selenium.UnsupportedCommandException: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>404 Not Found</title>
+</head><body>
+<h1>Not Found</h1>
+<p>The requested URL /wd/hub/session was not found on this server.</p>
+</body></html>
+Command duration or timeout: 272 milliseconds
 Build info: version: '2.52.0', revision: '4c2593cfc3689a7fcd7be52549167e5ccc93ad28', time: '2016-02-11 11:22:43'
 System info: host: 'PSNGI3228', ip: '10.222.35.190', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_31'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=43.0.4, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 1ffae689-c450-45d4-8df7-c45206a32d38
-*** Element info: {Using=link text, value=Log in}
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -45,94 +58,10 @@ Session ID: 1ffae689-c450-45d4-8df7-c45206a32d38
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy7.getCoordinates(Unknown Source)
-	at org.openqa.selenium.interactions.internal.MouseAction.getActionLocation(MouseAction.java:51)
-	at org.openqa.selenium.interactions.MoveMouseAction.perform(MoveMouseAction.java:39)
-	at org.openqa.selenium.interactions.CompositeAction.perform(CompositeAction.java:50)
-	at com.main.pof.BlogHomePage.clickLoginInLink(BlogHomePage.java:68)
-	at com.main.testcases.TestLogin.searchPostAfterDeletion(TestLogin.java:100)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
-	at org.testng.TestNG.run(TestNG.java:1032)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"link text","selector":"Log in"}
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.52.0', revision: '4c2593cfc3689a7fcd7be52549167e5ccc93ad28', time: '2016-02-11 11:22:43'
-System info: host: 'PSNGI3228', ip: '10.222.35.190', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_31'
-Driver info: driver.version: unknown
-	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ANKIT_~1/AppData/Local/Temp/anonymous7795226730925580623webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10723)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/ANKIT_~1/AppData/Local/Temp/anonymous7795226730925580623webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:623)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchPostAfterDeletion -->
-        <test-method status="FAIL" signature="tearDown()[pri:0, instance:com.main.testcases.TestLogin@194a1b5]" name="tearDown" is-config="true" duration-ms="0" started-at="2016-02-24T22:22:27Z" finished-at="2016-02-24T22:22:27Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Unable to locate element: {"method":"link text","selector":"Log Out"}
-Command duration or timeout: 30.20 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.52.0', revision: '4c2593cfc3689a7fcd7be52549167e5ccc93ad28', time: '2016-02-11 11:22:43'
-System info: host: 'PSNGI3228', ip: '10.222.35.190', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_31'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=43.0.4, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 1ffae689-c450-45d4-8df7-c45206a32d38
-*** Element info: {Using=link text, value=Log Out}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"link text","selector":"Log Out"}
-Command duration or timeout: 30.20 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.52.0', revision: '4c2593cfc3689a7fcd7be52549167e5ccc93ad28', time: '2016-02-11 11:22:43'
-System info: host: 'PSNGI3228', ip: '10.222.35.190', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_31'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=43.0.4, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 1ffae689-c450-45d4-8df7-c45206a32d38
-*** Element info: {Using=link text, value=Log Out}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy7.click(Unknown Source)
-	at com.main.pof.DashboardPage.signOut(DashboardPage.java:41)
-	at com.main.testcases.TestLogin.tearDown(TestLogin.java:117)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:249)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:158)
+	at com.main.pof.GenericFunctions.setup(GenericFunctions.java:53)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -141,34 +70,102 @@ Session ID: 1ffae689-c450-45d4-8df7-c45206a32d38
 	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:517)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:140)
-	at org.testng.TestRunner.afterRun(TestRunner.java:1019)
-	at org.testng.TestRunner.run(TestRunner.java:625)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:170)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:104)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
-	at org.testng.TestNG.run(TestNG.java:1032)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"link text","selector":"Log Out"}
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.52.0', revision: '4c2593cfc3689a7fcd7be52549167e5ccc93ad28', time: '2016-02-11 11:22:43'
-System info: host: 'PSNGI3228', ip: '10.222.35.190', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_31'
-Driver info: driver.version: unknown
-	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ANKIT_~1/AppData/Local/Temp/anonymous7795226730925580623webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10723)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/ANKIT_~1/AppData/Local/Temp/anonymous7795226730925580623webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:623)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:38)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:391)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.UnsupportedCommandException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="SKIP" signature="testLoginSuccess(java.lang.String, java.lang.String)[pri:0, instance:com.main.testcases.Workflow1@f438e]" name="testLoginSuccess" duration-ms="1" started-at="2016-02-29T19:50:17Z" data-provider="DP1" finished-at="2016-02-29T19:50:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Siteadmin@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginSuccess -->
+        <test-method status="SKIP" signature="takeScreenShotOnFailure(org.testng.ITestResult, java.lang.String)[pri:0, instance:com.main.testcases.Workflow1@f438e]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2016-02-29T19:50:17Z" finished-at="2016-02-29T19:50:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="SKIP" signature="createNewPost(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.main.testcases.Workflow1@f438e]" name="createNewPost" duration-ms="1" started-at="2016-02-29T19:50:17Z" data-provider="DP2" finished-at="2016-02-29T19:50:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Firstpost]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Siteadmin@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewPost -->
+        <test-method status="SKIP" signature="takeScreenShotOnFailure(org.testng.ITestResult, java.lang.String)[pri:0, instance:com.main.testcases.Workflow1@f438e]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2016-02-29T19:50:17Z" finished-at="2016-02-29T19:50:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="SKIP" signature="searchPostOnUI(java.lang.String, java.lang.String)[pri:0, instance:com.main.testcases.Workflow1@f438e]" name="searchPostOnUI" duration-ms="1" started-at="2016-02-29T19:50:17Z" data-provider="DP1" finished-at="2016-02-29T19:50:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Siteadmin@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchPostOnUI -->
+        <test-method status="SKIP" signature="addSearchDeletePost()[pri:0, instance:com.main.testcases.Workflow1@f438e]" name="addSearchDeletePost" duration-ms="1" started-at="2016-02-29T19:50:17Z" finished-at="2016-02-29T19:50:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addSearchDeletePost -->
+        <test-method status="SKIP" signature="takeScreenShotOnFailure(org.testng.ITestResult, java.lang.String)[pri:0, instance:com.main.testcases.Workflow1@f438e]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2016-02-29T19:50:17Z" finished-at="2016-02-29T19:50:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="SKIP" signature="takeScreenShotOnFailure(org.testng.ITestResult, java.lang.String)[pri:0, instance:com.main.testcases.Workflow1@f438e]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2016-02-29T19:50:17Z" finished-at="2016-02-29T19:50:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.main.testcases.Workflow1@f438e]" name="tearDown" is-config="true" duration-ms="0" started-at="2016-02-29T19:50:17Z" finished-at="2016-02-29T19:50:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.main.testcases.TestLogin -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.main.testcases.Workflow1 -->
+    </test> <!-- Test on chrome -->
+  </suite> <!-- Suite -->
 </testng-results>
